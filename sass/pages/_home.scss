@@ -1,0 +1,119 @@
+.section-about {
+  background-color: $color-even-section;
+}
+.section-service {
+  background-color: $color-odd-section;
+}
+.section-choose {
+  background-color: $color-even-section;
+}
+.section-book {
+  background-image: linear-gradient(to right,
+  $color-primary,$color-primary-light, $color-primary-dark
+ );
+}
+.section-book-mob{
+  background-image: linear-gradient(to right,
+  $color-primary,$color-primary-light, $color-primary-dark
+      
+    );
+}
+.section-contact {
+  background-color: $color-white !important;
+}
+.section-blog {
+  background-color: $color-even-section !important;
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../../assets/book.JPG);
+  background-size: 100%;
+  background-position: right 35% bottom 45%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  height: 35rem;
+  background-repeat: no-repeat;
+
+  &__form {
+    width: 50%; 
+    padding: 6rem;
+  }
+}
+.contact {
+  border: 2px solid transparent;
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+}
+.form2 {
+  padding: 3rem;
+}
+.form2 .heading {
+  color: $color-tertiary-light;
+  font-weight: bolder;
+}
+.form2 input {
+  border-bottom: 2px solid $color-gray-dark-2;
+}
+.form2 textarea {
+  border-bottom: 2px solid $color-gray-dark-2;
+}
+.col-left {
+  height: 500px;
+  background-color: $color-white;
+}
+.col-right {
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary,
+    $color-primary-dark
+  );
+
+  &__info {
+    padding: 2rem;
+    color: $color-white;
+  }
+}
+
+.list-info {
+  &__item {
+    list-style-type: none;
+    padding: 1rem 0;
+  }
+}
+
+.green-fas,
+.map {
+  color: $color-primary-light !important;
+  font-weight: bolder;
+}
+
+.social-icon__fab {
+  color: rgba($color-white, 0.9) !important;
+}
+.section-login {
+  color: $color-white !important;
+}
+
+.section-tours {
+  background-color: $color-gray-light-1;
+  padding: 25rem 0rem 15rem 0rem;
+  margin-top: -12rem;
+}
+// Login form mobile
+@media (min-width: 300px) and (max-width: 900px) {
+  .section-login {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  .section-login-mb {
+    display: none;
+  }
+}
+// book now mobile

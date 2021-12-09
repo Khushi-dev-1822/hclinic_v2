@@ -1,0 +1,125 @@
+   
+        <section class="section-login-mb u-padding ">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col bg-blue">
+                        <div class="box-mb">
+                            <div class="right-box-mb__top d-flex justify-content-end p-2">
+                                TOGGLE
+                            </div>
+                            <div class="box-mb__main p-5">
+                                <form class="form3 login ">
+                                    <h6 class="heading u-margin-bottom-small "> Login</h6>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="email" class="form__input" placeholder="Username"
+                                                    id="email" required>
+                                                <label for="email" class="form__label">Username</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="password" class="form__input" placeholder="Password"
+                                                    id="password" required>
+                                                <label for="password" class="form__label">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-5 pb-5">
+                                        <div class="col">
+                                            <div class="form__group u-mt-btn ">
+                                                <button class="btn btn--white " type="submit">Login &rarr;</button>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <span>Not a member? <a href="#">Signup Now</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- OAuth Authentication -->
+                                    <div class="container1">
+                                        <!-- Text -->
+                                        <div class="container1__content">
+                                            <i class="fab fa-2x fa-google"></i>
+                                        </div>
+
+                                        <!-- Separator line -->
+                                        <div class="container1__separator"></div>
+                                    </div>
+
+                                </form>
+                                <!-- SECTION - SIGNUP -->
+                                <!-- <form class="form3 signup  ">
+                                    <h6 class="heading u-margin-bottom-small "> Sign Up</h6>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group  u-margin-bottom-small">
+                                                <input type="text" class="form__input" placeholder="Full Name" id="name"
+                                                    required>
+                                                <label for="name" class="form__label">Full Name</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group  u-margin-bottom-small">
+                                                <input type="text" class="form__input" placeholder="Phone" id="name"
+                                                    required>
+                                                <label for="name" class="form__label">Phone</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group  u-margin-bottom-small">
+                                                <input type="text" class="form__input" placeholder="dd/mm/yy" id="name"
+                                                    required>
+                                                <label for="name" class="form__label">DOB</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="email" class="form__input" placeholder="Username"
+                                                    id="email" required>
+                                                <label for="email" class="form__label">Username</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="password" class="form__input" placeholder="Password"
+                                                    id="password" required>
+                                                <label for="password" class="form__label">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-1-of-2">
+                                            <div class="form__group u-mt-btn ">
+                                                <button class="btn btn--white " type="submit">Signup &rarr;</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-1-of-2">
+                                            <span class=" ">Already a member? <a href="#">Login Now</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>

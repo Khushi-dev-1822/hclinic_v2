@@ -171,16 +171,13 @@ app.post("/admin-login", (req, res) => {
   });
 });
 
-// Starting the node server
-app.listen(3000, "0.0.0.0", () => {
-  console.log("server started at port 3000");
 
-  // node sass middleware
-  // app.use(
-  //     sass.middleware({
-  //         src: __dirname + '/sass', //where the sass files are
-  //         dest: __dirname + '/public', //where css should go
-  //         debug: true // obvious
-  //     })
-  // );
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
+
+// Starting the node server
+app.listen(port, () => {
+  console.log("server started at port "+ port);
 });

@@ -10,6 +10,9 @@
     "scss": "sass --watch src/scss/main.scss public/styles/main.css",
     "node-sass": "node-sass --output-style compressed -o public/styles src/scss"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "author": "khushi-dev-1822 mayank-dev-1822",
   "license": "ISC",
   "dependencies": {

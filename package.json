@@ -11,7 +11,7 @@
     "node-sass": "node-sass --output-style compressed -o public/styles src/scss"
   },
   "engines": {
-    "node": "14.x"
+    "node": "v16.13.1"
   },
   "author": "khushi-dev-1822 mayank-dev-1822",
   "license": "ISC",

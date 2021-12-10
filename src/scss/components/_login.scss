@@ -1,0 +1,52 @@
+.bg-green {
+  background-image: linear-gradient(to bottom, rgba($color-primary, 0.75), 
+  rgba($color-primary-dark,0.75)), url('../../assets/Login.JPG') !important; 
+  background-position: center;
+  background-size: cover;
+ }
+
+.bg-blue {
+  background-color: $color-blue-dark;
+}
+
+.form3 input {
+  background-color: transparent !important;
+  border-bottom: 2px solid $color-gray-dark-2;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.container1 {
+  /* Content is centered horizontally */
+  align-items: center;
+  display: flex;
+
+  /* Used to set the position of text */
+  position: relative;
+}
+
+.container1__content {
+  /* We won't see the separator line */
+
+  /* Displayed at the center of container */
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// .container1__separator {
+//   border-bottom: 1px solid $color-gray-dark-2;
+//   height: 1px;
+//   width: 100%;
+// }
+
+.loginBtn{
+  background-color:$color-white !important;
+}
+.changeClass{
+  color: $color-secondary-dark !important;
+}

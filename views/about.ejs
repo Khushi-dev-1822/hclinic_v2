@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham Homopathy Clinic </title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!-- FONT ASWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS  -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png">
+    <!-- BOOSTRAP 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- FOOTER -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+
+    <style>
+      html{
+        scroll-behavior: smooth !important;
+      }
+      a{
+      color: black !important;
+  }
+  .theme-color{
+      background-color: #39BB81;
+  }
+  .login-btn{
+      background-color: #0087C1;
+      padding: 0.4rem 1rem 0.4rem 1rem !important;
+  }
+  .header-height{
+      height: 80vh;
+  }
+  .slider-overlay{
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 31%, rgba(255,255,255,0.7346288857339811) 50%, rgba(0,212,255,0) 100%);
+  }
+  .carousel-inner{
+      position: relative;
+      z-index: -1;
+  }
+  .nav-logo{
+      width: 4%;
+  }
+  .mdi-t {
+      font-size: 39px;
+      margin-right: 10px;
+  }
+  
+  .play-container {
+      margin-top: 150px
+  }
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+  
+  /* :root {
+    --bc: #efeeee;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #da2c4d;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --primary: #f9c6cf;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  } */
+  
+  
+  /* Classes */
+  .top {
+    padding: 2em;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+  }
+  .title {
+    color: var(--black);
+  }
+  .title h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+  .title h3 {
+    font-size: 14px; 
+    font-weight: 400; 
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; 
+    letter-spacing: 8px;
+    line-height: 0;
+  }
+  /* Parallax */
+  .parallax1 {
+    position: relative;
+    background-image: url("assets/edited/IMG_1651.jpg");
+    min-height: 50vh; 
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url("assets/edited/IMG_1589.jpg");
+    min-height: 50vh; 
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+  }
+  .parallax2 h2 {
+    font-size: 5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--white);
+    z-index: 1;
+  }
+  .parallax3 {
+    position: relative;
+    background-image: url("assets/edited/award.jpg");
+    min-height: 50vh; 
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* Paragraph */
+  .paragraph {
+    margin: 3em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .paragraph p {
+    width: 60%;
+    font-size: 1.05em;
+    line-height: 1.45em;
+    letter-spacing: .1em;
+    color: rgb(64, 64, 64);
+  }
+  .first span {
+    font-size: 4em;
+    color: var(--red);
+    float: left;
+    font-weight: 400;
+    line-height: 55px;
+    padding: .05em .2em 0 0;
+  }
+  .second span {
+    font-size: 4em;
+    color: var(--teal);
+    float: left;
+    font-weight: 400;
+    line-height: 55px;
+    padding: .05em .2em 0 0;
+  }
+  .third span {
+    font-size: 4em;
+    color: var(--cyan);
+    float: left;
+    font-weight: 400;
+    line-height: 55px;
+    padding: .05em .2em 0 0;
+  }
+  /* Selection */
+  ::selection {
+    color: var(--white);
+    background: rgba(161, 181, 201, .8);
+  }
+  /* SCROLLBAR */
+  ::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+  }
+  ::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+  }
+  ::-webkit-scrollbar-thumb {
+        background-color: rgba(161, 181, 201, .8);
+  }
+  
+  </style>
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+  <main>
+    <!-- SECTION- About section -->
+    <!-- <section class=" section-about ag-grid-block">
+        <article class="ag-grid_item">
+          <div class="ag-format-container clearfix">
+            <div class="ag-info_img-box">
+              <img src="assets/01.png" alt="Img" />
+            </div>
+            <div class="ag-grid__wrap">
+              <div class="ag-info_box">
+                <div class="ag-info_descr">
+                  <div class="ag-info_title">Our Vision</div>
+                  <p class="ag-info_text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+    
+        <article class="ag-grid_item">
+          <div class="ag-format-container clearfix">
+            <div class="ag-info_img-box">
+              <img src="assets/02.png" alt="Img" />
+            </div>
+            <div class="ag-grid__wrap">
+              <div class="ag-info_box">
+                <div class="ag-info_descr">
+                  <div class="ag-info_title">Our Approach</div>
+                  <p class="ag-info_text">
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+    
+        <article class="ag-grid_item">
+          <div class="ag-format-container clearfix">
+            <div class="ag-info_img-box">
+              <img src="assets/03.png" alt="Img" />
+            </div>
+            <div class="ag-grid__wrap">
+              <div class="ag-info_box">
+                <div class="ag-info_descr">
+                  <div class="ag-info_title">Our Process</div>
+                  <p class="ag-info_text">
+                    Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+    
+      </section> -->
+
+
+      <section class="top">
+        <div class="title">
+          <h3>About Us</h3>
+        
+        </div>
+      </section>
+      <section class="page">
+        <div class="parallax1"></div>
+        <div class="paragraph first">
+          <p><span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="parallax2">
+          <div class="overlay"></div>
+          <h2>Beautiful</h2>
+        </div>
+        <div class="paragraph second">
+          <p><span>O</span>rci porta non pulvinar neque laoreet suspendisse interdum. Nulla malesuada pellentesque elit eget gravida. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Pharetra convallis posuere morbi leo urna molestie. Volutpat lacus laoreet non curabitur gravida. Ornare aenean euismod elementum nisi quis eleifend quam. Fames ac turpis egestas sed tempus urna. Nisl nisi scelerisque eu ultrices vitae auctor. A iaculis at erat pellentesque adipiscing commodo elit at. Nulla posuere sollicitudin aliquam ultrices. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Et molestie ac feugiat sed lectus. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Neque viverra justo nec ultrices dui sapien eget mi.</p>
+        </div>
+        <div class="parallax3"></div>
+        <div class="paragraph third">
+          <p><span>A</span>uctor neque vitae tempus quam pellentesque. In nibh mauris cursus mattis molestie a iaculis at. Sem integer vitae justo eget magna fermentum iaculis eu non. Eget velit aliquet sagittis id. Sed libero enim sed faucibus turpis in eu mi bibendum. Blandit libero volutpat sed cras. Ultricies integer quis auctor elit sed vulputate mi sit. Eget lorem dolor sed viverra ipsum nunc. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Ac placerat vestibulum lectus mauris ultrices eros in cursus. Integer vitae justo eget magna fermentum iaculis eu. Auctor elit sed vulputate mi sit amet mauris commodo.</p>
+        </div>
+      </section>
+
+
+
+</main>
+
+
+    <!-- SECTION- Footer -->
+    <footer class="footer-section">
+      <!-- Scroll to top button -->
+      <div class=" d-flex justify-content-end wtsap">
+         <button id="whatsapp"> <a href="https://wa.me/+919871794369/?text=Hello"><i class="fa-2x fab fa-whatsapp"></i></a></button>
+       </div>
+     <div class="container">
+         <div class="footer-cta  pt-5 pb-5">
+             <div class="row  justify-content-center">
+                 <div class="col-xl-3 col-md-3 mb-30">
+                     <div class="single-cta">
+                         <i class="fas fa-map-marker-alt"></i>
+                         <div class="cta-text">
+                             <h4>Find us</h4>
+                             <span>1010 Avenue, sw 54321</span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-xl-4 col-md-4 mb-30">
+                     <div class="single-cta">
+                         <i class="fas fa-phone"></i>
+                         <div class="cta-text">
+                             <h4>Call us</h4>
+                             <span>+91 8412034567, +91 8412004567 </span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-xl-3 col-md-3 mb-30">
+                     <div class="single-cta">
+                         <i class="far fa-envelope-open"></i>
+                         <div class="cta-text">
+                             <h4>Mail us</h4>
+                             <span>Sakshamcure@gmail.com</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="footer-content pt-5 pb-5">
+             <div class="row justify-content-center">
+                 <div class="col-xl-3 col-lg-3 mb-50">
+                     <div class="footer-widget">
+                         <div class="footer-logo">
+                             <a href="index.html"><img src="assets/new-logo.png" class="img-fluid" alt="logo"></a>
+                         </div>
+                         <div class="footer-text">
+                             <p>The holistic approach to treat your health issue whether physical or mental. Dr.
+                                 Shubhangi has more than 25 years of experience in the field of Homoeopathy and
+                                 holistic treatment. </p>
+                         </div>
+                         <div class="footer-social-icon">
+                             <span>Follow us</span>
+                             <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                             <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                             <a href="#"><i class="fab fa-instagram insta-bg"></i></a>
+                             <a href="#"><i class="fab fa-youtube youtube-bg"></i></a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                     <div class="footer-widget">
+                         <div class="footer-widget-heading">
+                             <h3>Useful Links</h3>
+                         </div>
+                         <ul>
+                             <li><a href="index.html">Home</a></li>
+                             <li><a href="about.html">about</a></li>
+                             <li><a href="#service">services</a></li>
+                             <li><a href="#book">Appointment</a></li>
+                             <li><a href="contact.html">Contact</a></li>
+                             <li><a href="#blogs">Blogposts</a></li>
+
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                     <div class="footer-widget">
+                         <div class="footer-widget-heading">
+                             <h3>Subscribe</h3>
+                         </div>
+                         <div class="footer-text mb-25">
+                             <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                         </div>
+                         <div class="subscribe-form">
+                             <form action="#">
+                                 <input type="text" placeholder="Email Address">
+                                 <button><i class="fab fa-telegram-plane"></i></button>
+                             </form>
+
+                         </div> 
+                          <!-- btn css  -->
+                         <div class="btn-row-1 ">
+                             <a href="https://play.google.com/store/apps/details?id=com.ibis.saksham_homeopathy&hl=en_IN&gl=US">
+                         <button type="button" class="btn btn-outline-dark android-btn ">
+                             <div class="row-android-btn">
+                             <span><img src="https://img.icons8.com/fluency/48/000000/google-play.png"/></span>
+                             <p> GET IT ON <br><b style="color: #fff;">Google Play</b></p>
+                         </div>
+                         </button>
+                     </a>
+                         <button type="button" class="btn btn-outline-dark apple-store-btn"> 
+                             <div class="row-apple-btn">
+                               <span>  <i class="fab fa-apple"></i></span>
+                                 <p> GET IT ON  <br>  <b style="color: #fff;  padding-left:10px;">App Store</b> </p>
+                             </div>
+                         </button>
+                     </div>
+
+                     <!-- css -->
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="copyright-area">
+         <div class="container">
+             <div class="row justify-content-center">
+                 <div class="col-xl-5 col-lg-5 text-center text-lg-left">
+                     <div class="copyright-text">
+                         <p>Copyright &copy; 2021, All Right Reserved <a href="#">Saksham Homoeopathy</a> <br> ISO<span> 9001:2015</span></p>
+                     </div>
+                 </div>
+                 <div class="col-xl-5 col-lg-5 d-none d-lg-block text-right">
+                     <div class="footer-menu">
+                         <ul>
+                             <li><a href="index.html">Home</a></li>
+                             <li><a href="about.html">About</a></li>
+                             <li><a href="#book">Appointment</a></li>
+                             <li><a href="gallery">Gallery</a></li>
+                             <li><a href="contact.html">Contact</a></li>
+                             
+                         </ul>
+                     </div>
+                     
+                 </div>
+             </div>
+            
+         </div>
+        
+     </div>
+ </footer>
+
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/1744f3f671.js"></script>
+<!-- Gallery  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
+<script >
+   //Get the button
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+</body>
+
+</html>

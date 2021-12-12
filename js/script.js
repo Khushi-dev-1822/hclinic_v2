@@ -233,14 +233,3 @@ dateControl.value = '00:00';
  })
 
 // benefit section
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-    document.querySelector('.com__nav-item').classList.remove('.active');
-  } else {
-    document.body.style.backgroundColor = "pink";
-  }
-}
-
-var x = window.matchMedia("(max-width: 768px)")
-myFunction(x) // Call listener function at run time
-x.addEventListener(myFunction) // Attach listener function on state changes

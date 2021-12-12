@@ -630,6 +630,10 @@
                                 <input type="text" class="form__input" placeholder="Phone Number" id="email" name="patient_phone" required>
                                 <label for="name" class="form__label">Phone Number</label>
                             </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Age" id="age" name="patient_age" required>
+                                <label for="name" class="form__label">Age</label>
+                            </div>
 
                             <div class="form__group">
                                 <input class="form__input" name="appointment_date" type="date" value="10-12-2021" >
@@ -638,6 +642,24 @@
                             <div class="form__group mt-4">
                                 <input class="form__input" type="time" id="appt" name="appointment_time">
                             </div>
+                            <div class="form__group mt-4">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                      Female
+                                    </label>
+    
+                                </div>
+                            </div>
+                           
                             <div class="form__group">
                                 <button class="btn btn--green nav-link buttons btn login-btn text-white p u-margin-top-small" type="submit">Book &rarr;</button>
                             </div>
@@ -671,12 +693,32 @@
                                 <input type="email" class="form__input" placeholder="Phone number" id="email" name="patient_phone" required>
                                 <label for="name" class="form__label">Phone number</label>
                             </div>
-
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Age" id="age" name="patient_age" required>
+                                <label for="name" class="form__label">Age</label>
+                            </div>
                             <div class="form__group">
                                 <input class="form__input" placeholder="date" name="appointment_date" type="date">
                             </div>
                             <div class="form__group mt-4">
                                 <input class="form__input" placeholder="Time" name="appointment_time" type="time" id="appt" name="appt">
+                            </div>
+                            <div class="form__group mt-4">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                      Female
+                                    </label>
+    
+                                </div>
                             </div>
                             <div class="form__group">
                                 <button class="btn btn--green buttons nav-link btn login-btn text-white p u-margin-top-small" type="submit">Book &rarr;</button>

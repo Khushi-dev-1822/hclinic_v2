@@ -733,6 +733,9 @@ a {
   color: #fff !important;
   font-size: 2.5rem !important; }
 
+.benefit-heading {
+  color: #fff !important; }
+
 body {
   font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
@@ -830,7 +833,9 @@ body {
     background: rgba(32, 35, 42, 0.75);
     transform: scaleX(0);
     transform-origin: right center;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    color: #fff !important;
+    top: 0 !important; }
     .com__nav-link.flex-row {
       flex-flow: row wrap; }
     .com__nav-link.centered {
@@ -908,6 +913,10 @@ body {
     transform: rotate(0); }
     .logo img:hover {
       transform: rotate(180deg) scale(1.1); }
+
+.on-box {
+  color: #fff !important;
+  font-size: 2rem !important; }
 
 .card-blog {
   border: none !important;
@@ -1247,7 +1256,7 @@ body {
   align-items: center !important; }
 
 #chatbot {
-  background-image: linear-gradient(to right, #2998ff, #5643fa);
+  background-color: #fff;
   border: none;
   border-radius: 50% !important;
   color: #fff !important;
@@ -1264,8 +1273,8 @@ body {
   color: #fff !important; }
 
 .bot-img {
-  height: 50px !important;
-  width: 50px !important; }
+  height: 40px !important;
+  width: 40px !important; }
 
 .ChatWindow {
   position: fixed;

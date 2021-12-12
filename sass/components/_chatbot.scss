@@ -3,12 +3,9 @@
     justify-content: center !important;
     align-items: center !important;
 
-    &:target{
-
-    }
     }
     #chatbot {
-     background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+     background-color: #fff;
       border: none;
       border-radius: 50% !important;
       color: $color-white !important;
@@ -28,8 +25,8 @@
       color: $color-white !important;
     }
     .bot-img{
-      height: 50px !important;
-      width: 50px !important;
+      height: 40px !important;
+      width: 40px !important;
     }
 
 

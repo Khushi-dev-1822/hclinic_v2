@@ -12,7 +12,8 @@
       height: 5rem;
       width: 5rem;
       position: fixed;
-      top: 3rem;
+      // top: 3rem;
+      top: 1.8rem;
       right: 3rem;
       border-radius: 50%;
       z-index: 2000;
@@ -26,7 +27,8 @@
       width: 4rem;
       border-radius: 50%;
       position: fixed;
-      top: 3.5rem;
+      // top: 3.5rem;
+      top: 2.5rem;
       right: 3.5rem;
       background-image: radial-gradient(
         $color-primary-light,
@@ -161,7 +163,7 @@
   }
 }
 
-@media (min-width:934px) {
+@media (min-width:997px) {
    
   .hamburger {
       display: none;

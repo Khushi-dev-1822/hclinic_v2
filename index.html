@@ -22,17 +22,20 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
     <!-- GOOGLE FONTS -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+
     <!-- <link rel="stylesheet" href="https://icons8.com/icon/rZwnRdJyYqRi/google-play">
     <link rel="stylesheet" href="https://icons8.com/icon/xWVjuc9hryql/twitter">
     <link rel="stylesheet" href="https://icons8.com/icon/118497/facebook"> -->
+    <style>
+      
+    </style>
 </head>
 
-<body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
-
+<body >
+    <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button> -->
     <div class="navigation hamburger">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
@@ -49,42 +52,40 @@
                 <li class="navigation__item"><a href="#book" class="navigation__link"><span>03</span>Book</a></li>
                 <li class="navigation__item"><a href="#blogs" class="navigation__link"><span>04</span>Blog</a></li>
                 <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>05</span>Contact</a></li>
-              
+                <li class="navigation__item"><a href="about.html" class="navigation__link"><span>06</span>About</a></li>
+                
             </ul>
         </nav>
     </div>
-
     <header class="header">
-        <div class="container-fluid"> 
+        <div class="container-fluid change-pd"> 
             <div class="row navigation ">
-              <div class="col-4 navigation__left" id="changeBg">
+              <div class="col-4 hide-mob-seven navigation__left" id="changeBg">
                <div class="logo-box">
                 <img src="assets/new-logo.png" alt="" class="img-fluid header-logo">
                 <a class="navbar-brand fs-4 text-white fw-bolder" href="#">Saksham Homoeopathy</a>
                </div>
               </div>
-              <div class="col-8  navigation__middle p-0">
+              <div class="col-8 mob-width-seven navigation__middle p-0">
                   <div class="navigation__middle-top">
                 <ul class="nav justify-content-center align-items-center nav-mob-ul p-0">
                     <li class="nav-item">
-                      <a class="nav-link active home" aria-current="page" href="index.html">Home</a>
+                      <a class="nav-link active home" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#book">Book</a>
-                    </li>
-                   
+                    </li>   
                     <li class="nav-item">
                       <a class="nav-link " href="about.html" tabindex="-1" aria-disabled="true">About</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link " href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="  nav-link  login-btn text-white" href="#login">Login</a>
+                        <a class="  nav-link  login-btn text-white" href="#login" >Login</a>
                       </li>
                       <!-- <div class="box">
                         <form name="search">
@@ -97,14 +98,14 @@
                 </div>
     
                 <div class="navigation__middle-bottom p-3">
-                  <h1 class=" heading-main display-1  p-3">Saksham Homoeopathic <br> Clinic</h1>
+                  <h1 class=" heading-main display-1 new-heading-style p-3">Saksham Homoeopathic Clinic</h1>
                   <div class="parent-p container-fluid ">
                       <div class="row ">
                         <div class="col-sm">
                           <hr class="header-hr mx-3">
                         </div>
                         <div class="col-10 ">
-                          <p class="lead w-75 ">
+                          <p class="lead responsive-width header-p">
                             At Saksham Homoeopathic Clinic,we are keen in providing our patients Holistic treatment i.e.Homoeopathic treatment along with yoga, diet and nutrition, acupressure ,importance of healthy habits as per need of the case.
                         </p>
                         </div>
@@ -112,16 +113,16 @@
                     </div>
                 </div>
                 
-                  <div class="container-fluid p-0">
+                  <div class="container-fluid p-0 set-bottom-style">
                     <div class="row my-row">
                       <div class="col-sm col-head-left ">
-                        <h1 class=" heading-main display-6  p-3">Saksham Homoeopathy Clinic</h1>
+                        <h1 class=" heading-main display-6  p-3">Our Medicine Chest</h1>
                         <p class="lead w-75  ">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius repellat.
                           </p>
                       </div>
                       <div class="col-sm col-head-right p-0">
-                        <img src="assets/slider_2.JPG " class="img-fluid" alt="">
+                        <img src="assets/chest.jpg " class="img-fluid" alt="">
                       </div>
                     </div>
                   </div>
@@ -139,30 +140,34 @@
     <main>
        <!-- SECTION-  why section -->
        <section class="section-about u-padding " >
-        <h2 class="text-center">Why saksham</h2>
+        <div class="u-center-text u-margin-bottom-medium green-hr">
+            <h2 class="heading-secondary">
+                Why saksham
+            </h2>        
+        </div>
+      
          <div class="container-fluid">
-             <div class="row about">
+             <div class="row about  mob-vanish">
                  <div class="col d-flex justify-content-center">
                      <!-- IMAGES -->
                      <div class="col composition__1">
                          <div class="row justify-content-end ">
-                             <img src="assets/selected_V2/gh.jpg" alt="why" class="img-fluid w-50 composition__photo-1" >
+                             <img src="assets/03.png" alt="why" class="img-fluid new-width composition__photo-1" >
                          </div>
                          <div class="row justify-content-end ">
-                           <img src="assets/selected_V2/IMG_1551.JPG" alt="why" class="img-fluid w-50 composition__photo-2" >
+                           <img src="assets/h.jpg" alt="why" class="img-fluid new-width composition__photo-2" >
                          </div>
                        </div>
                      <div class="col composition__2">
                          <div class="row ">
-                            <img src="assets/selected_V2/IMG_1667.JPG" alt="why" class="img-fluid w-50 composition__photo-3" >
+                            <img src="assets/drop.jpg" alt="why" class="img-fluid new-width composition__photo-3" >
                          </div>
                          <div class="row ">
-                           <img src="assets/edited/IMG_1640.jpg" alt="why" class="img-fluid w-50 composition__photo-4" >
+                           <img src="assets/02.png" alt="why" class="img-fluid new-width composition__photo-4" >
                          </div>
                        </div>
-                   
                  </div>
-                 <div class="col ">
+                 <div class="col">
                     <p class="lead">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta incidunt accusantium deserunt ut eos, nesciunt deleniti ipsum at nemo, natus dolore eveniet nobis maxime magni mollitia eum? Ullam assumenda aliquid fuga animi aspernatur, earum, debitis voluptatem placeat corporis iste ab, provident doloribus? Expedita beatae doloribus incidunt voluptatum aliquid sequi inventore?
                     </p>
@@ -174,14 +179,25 @@
                     </p>
                  </div>
              </div>
+             <div class="col ">
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta incidunt accusantium deserunt ut eos, nesciunt deleniti ipsum at nemo, natus dolore eveniet nobis maxime magni mollitia eum? Ullam assumenda aliquid fuga animi aspernatur, earum, debitis voluptatem placeat corporis iste ab, provident doloribus? Expedita beatae doloribus incidunt voluptatum aliquid sequi inventore?
+                </p>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta incidunt accusantium deserunt ut eos, nesciunt deleniti ipsum at nemo, natus dolore eveniet nobis maxime magni mollitia eum? Ullam assumenda aliquid fuga animi aspernatur, earum, debitis voluptatem placeat corporis iste ab, provident doloribus? Expedita beatae doloribus incidunt voluptatum aliquid sequi inventore?
+                </p>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta incidunt accusantium deserunt ut eos, nesciunt deleniti ipsum at nemo, natus dolore eveniet nobis maxime magni mollitia eum? Ullam assumenda aliquid fuga animi aspernatur, earum, debitis voluptatem placeat corporis iste ab, provident doloribus? Expedita beatae doloribus incidunt voluptatum aliquid sequi inventore?
+                </p>
          </div>
      </section>
         <!-- SECTION- Service section -->
         <section class="section-service u-padding" id="service">
-            <div class="u-center-text u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-small green-hr">
                 <h2 class="heading-secondary">
                     Services We Offer
                 </h2>
+               
             </div>
 
             <div class="row service-cards" >
@@ -194,7 +210,7 @@
                             SAFE & HOLISTIC TREATMENT
                         </h3>
                         <p class="service-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, laboriosam. Nam consectetur non rem quo blanditiis minima quae voluptate incidunt.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, laboriosam. 
                         </p>
                     </div>
                     </div>
@@ -208,8 +224,7 @@
                             DOCTOR CONSULTATION
                         </h3>
                         <p class="service-box__text">
-                            30 - 50 minutes consultation with a doctor to understand the root cause & extent of
-                            your condition.
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quia.
                         </p>
                     </div>
                     </div>
@@ -399,10 +414,11 @@
         </section>
         <!-- SECTION- why choose us section -->
         <section class="section-choose u-padding statistics-section" id="counter">
-            <div class="u-center-text u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-medium green-hr">
                 <h2 class="heading-secondary">
                     Why Choose Us
                 </h2>
+               
             </div>
 
 
@@ -454,21 +470,14 @@
         <!-- SECTION- Gallery section -->
         <section class="section-gallery">
             <div class="introcontainer">
-                <!-- Slider main container -->
                 <div class="swiper-container">
-                  <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide">
                       <div class="cards">
                         <div class="card  Card ong">
                           <img src="assets/g-3.JPG"/>
                           <div class="text">
                             </div>
-                        <div class="title-box">
-                          <h1>CREATIVE COLLECTIVE.</h1>
-                          <div class="seperator"></div>
-                        </div>
                           </div>
                       </div>
                     </div>
@@ -478,11 +487,6 @@
                           <img src="assets/g-2.JPG" alt="" />
                         <div class="text">
                             </div>
-                        <div class="title-box">
-                          <h1>FOR ARTISTS.</h1>
-                          
-                          <div class="seperator"></div>
-                        </div>
                       </div>
                       </div>
                     </div>
@@ -492,48 +496,38 @@
                           <img src="assets/g-1.JPG" alt="" />
                           <div class="text">
                             </div>
-                 
-                        <div class="title-box">
-                          <h1>FOR CREATIVES.</h1>
-                         
-                          <div class="seperator"></div>
-                        </div>
                       </div>
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="cards">
                         <div class=" card Card four">
-                          <img src="assets/selected/l-4.JPG" alt="" />
+                          <img src="assets/g-4.JPG" alt="" />
                           <div class="text">
                             </div>
-              
-                        <div class="title-box">
-                          <h1>FOR DESIGNERS.</h1>
-                        
-                          <div class="seperator"></div>
-                        </div>
                       </div>
                       </div>
                     </div>
                   </div>
-                  <!-- If we need pagination -->
                   <div class="swiper-pagination"></div>
-              
-                  <!-- If we need navigation buttons -->
                    <div class="swiper-arrows">
                   <div class="swiper-button-prev"><span></span></div>
                   <div class="swiper-button-next"><span></span></div>
                 </div>
-              
-                  <!-- If we need scrollbar -->
                 </div>
               </div>
         </section>
           <!-- SECTION- Our testimonial section -->
           <section id="testim" class="testim section-testimonial u-margin-top-huge ">
+           
             <!--         <div class="testim-cover"> -->
             <div class="wrap">
+                <div class="u-center-text u-margin-bottom-medium green-hr">
+                    <h2 class="heading-secondary">
+                        People Said
+                    </h2>
+                  
+                </div>
                 <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
                 <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
                 <ul id="testim-dots" class="dots">
@@ -613,26 +607,33 @@
             <div class="row">
                 <div class="book">
                     <div class="book__form">
-                        <form action="#" class="form" autocomplete="off">
+                        <form action="/appointment" class="form" autocomplete="off" method="POST">
                             <div class=" u-margin-bottom-small u-mt">
                                 <h2 class="heading-secondary">
                                     Book now!
                                 </h2>
                             </div>
                             <div class="form__group  u-margin-bottom-small">
-                                <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                                <input type="text" class="form__input" placeholder="Full Name" id="name" name="patient_name" required>
                                 <label for="name" class="form__label">Full Name</label>
                             </div>
+
                             <div class="form__group">
-                                <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                <input type="email" class="form__input" placeholder="Email address" id="email" name="patient_email" required>
                                 <label for="name" class="form__label">Email address</label>
                             </div>
 
                             <div class="form__group">
-                                <input class="form__input" type="date">
+                                <input type="text" class="form__input" placeholder="Phone Number" id="email" name="patient_phone" required>
+                                <label for="name" class="form__label">Phone Number</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input class="form__input" name="appointment_date" type="date" value="10-12-2021" >
+                                
                             </div>
                             <div class="form__group mt-4">
-                                <input class="form__input" type="time" id="appt" name="appt">
+                                <input class="form__input" type="time" id="appt" name="appointment_time">
                             </div>
                             <div class="form__group">
                                 <button class="btn btn--green nav-link buttons btn login-btn text-white p u-margin-top-small" type="submit">Book &rarr;</button>
@@ -644,7 +645,7 @@
         </section>
         <!-- SECTION- Booking mob section -->
         <section class="section-book-mob u-padding " id="book">
-            <div class="row">
+            <div class="row set-width-new">
                 <div class=" book book-mob">
                     <div class="book__form book-mob__form">
                         <form action="#" class="form" autocomplete="off">
@@ -654,19 +655,25 @@
                                 </h2>
                             </div>
                             <div class="form__group  u-margin-bottom-small">
-                                <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                                <input type="text" class="form__input" placeholder="Full Name" id="name" name="patient_name" required>
                                 <label for="name" class="form__label">Full Name</label>
                             </div>
+
                             <div class="form__group">
-                                <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                <input type="email" class="form__input" placeholder="Email address" id="email" name="patient_email" required>
                                 <label for="name" class="form__label">Email address</label>
                             </div>
 
                             <div class="form__group">
-                                <input class="form__input" type="date">
+                                <input type="email" class="form__input" placeholder="Phone number" id="email" name="patient_phone" required>
+                                <label for="name" class="form__label">Phone number</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input class="form__input" placeholder="date" name="appointment_date" type="date">
                             </div>
                             <div class="form__group mt-4">
-                                <input class="form__input" type="time" id="appt" name="appt">
+                                <input class="form__input" placeholder="Time" name="appointment_time" type="time" id="appt" name="appt">
                             </div>
                             <div class="form__group">
                                 <button class="btn btn--green buttons nav-link btn login-btn text-white p u-margin-top-small" type="submit">Book &rarr;</button>
@@ -676,13 +683,13 @@
                 </div>
             </div>
         </section>
- 
         <!-- SECTION - Blog section -->
         <section class="section-blog u-padding" id="blogs">
-            <div class="u-center-text u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-medium green-hr">
                 <h2 class="heading-secondary">
-                   Health bytes
+                   Health Bites
                 </h2>
+              
             </div>
             <div class="container">
                 <div class="row">
@@ -725,7 +732,7 @@
                 </div>
             </div>
 
-            <div class="u-center-text u-margin-top-huge ">
+            <div class="u-center-text u-margin-top-small ">
                 <button class="  nav-link btn login-btn buttons text-white p" type="submit">Discover more &rarr;</button>
             </div>
 
@@ -734,9 +741,13 @@
 
     <!-- SECTION- Footer -->
     <footer class="footer-section">
-        <!-- Scroll to top button -->
+        <!-- Whatsapp Icon -->
         <div class=" d-flex justify-content-end wtsap">
-           <button id="whatsapp"> <a href="https://wa.me/+919871794369/?text=Hello"><i class="fa-2x fab fa-whatsapp"></i></a></button>
+           <button id="whatsapp"> <a href="https://wa.me/+919871794369/?text=Hello, I have a query"><i class="fa-2x fab fa-whatsapp"></i></a></button>
+         </div>
+          <!-- Chatbot -->
+        <div class=" d-flex justify-content-end bot ">
+           <button id="chatbot"> <a href="#"><img class="bot-img" src="assets/bot.png" alt="bot" srcset=""></a></button>
          </div>
        <div class="container">
            <div class="footer-cta  pt-5 pb-5">
@@ -746,7 +757,7 @@
                            <i class="fas fa-map-marker-alt"></i>
                            <div class="cta-text">
                                <h4>Find us</h4>
-                               <span>1010 Avenue, sw 54321</span>
+                               <span>308, Sector 22A</span>
                            </div>
                        </div>
                    </div>
@@ -797,11 +808,11 @@
                                <h3>Useful Links</h3>
                            </div>
                            <ul>
-                               <li><a href="index.html">Home</a></li>
-                               <li><a href="about.html">about</a></li>
+                               <li><a href="/">Home</a></li>
+                               <li><a href="/about">about</a></li>
                                <li><a href="#service">services</a></li>
                                <li><a href="#book">Appointment</a></li>
-                               <li><a href="contact.html">Contact</a></li>
+                               <li><a href="/contact">Contact</a></li>
                                <li><a href="#blogs">Blogposts</a></li>
 
                            </ul>
@@ -813,7 +824,7 @@
                                <h3>Subscribe</h3>
                            </div>
                            <div class="footer-text mb-25">
-                               <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                               <p>Dont miss to subscribe to our new feeds, kindly fill the form below.</p>
                            </div>
                            <div class="subscribe-form">
                                <form action="#">
@@ -857,11 +868,11 @@
                    <div class="col-xl-5 col-lg-5 d-none d-lg-block text-right">
                        <div class="footer-menu">
                            <ul>
-                               <li><a href="index.html">Home</a></li>
-                               <li><a href="about.html">About</a></li>
+                               <li><a href="/">Home</a></li>
+                               <li><a href="/about">About</a></li>
                                <li><a href="#book">Appointment</a></li>
-                               <li><a href="gallery">Gallery</a></li>
-                               <li><a href="contact.html">Contact</a></li>
+                               <li><a href="/gallery">Gallery</a></li>
+                               <li><a href="/contact">Contact</a></li>
                                
                            </ul>
                        </div>
@@ -1015,7 +1026,30 @@
         </div>
     </div>
 
-
+<section class="chatbot hidden">
+    <div class="ChatWindow">
+        <div class="ChatWindow-inner">
+          
+          <div class="ChatItem ChatItem--customer">
+            <div class="ChatItem-meta">
+              <div class="ChatItem-avatar">
+                <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png">
+              </div>
+            </div>
+            <div class="ChatItem-chatContent">
+              <div class="ChatItem-chatText">sound isnt working on my phone anymore</div>
+              <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:49</div>
+            </div>
+          </div>
+      
+          <div class="ResponseCard js-responseCard" style="opacity: 0">
+            <div class="ResponseCard-option js-responseOption">Hi there! I can help you with that? What kind of phone do you have?</div>
+            <div class="ResponseCard-option js-responseOption">Ok, try turning your volume all the way up.</div>
+            <div class="ResponseCard-option js-responseOption">Hey, how are you doing today?</div>
+          </div>
+        </div>
+      </div>
+</section>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -1027,7 +1061,8 @@
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>
     <!-- Gallery  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
+  
     <script src="js/script.js"></script>
 </body>
 

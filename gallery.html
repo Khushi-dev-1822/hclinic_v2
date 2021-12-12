@@ -64,7 +64,28 @@
 </head>
 
 <body>
-
+    <div class="navigation hamburger">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+    
+        <div class="navigation__background">&nbsp;</div>
+    
+        <nav class="navigation__nav">
+            <ul class="navigation__list mob-ul">
+                <li class="navigation__item"><a href="index.html" class="navigation__link"><span>01</span>Home</a></li>
+                <li class="navigation__item"><a href="gallery.html" class="navigation__link"><span>02</span>Gallery</a></li>
+                <li class="navigation__item"><a href="#book" class="navigation__link"><span>03</span>Book</a></li>
+                <li class="navigation__item"><a href="#blogs" class="navigation__link"><span>04</span>Blog</a></li>
+                <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>05</span>Contact</a></li>
+                <li class="navigation__item"><a href="about.html" class="navigation__link"><span>06</span>About</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
     <header>
         <!-- top info bar -->
         <div class="top-info-nav">
@@ -88,7 +109,7 @@
         <!-- second navbar -->
         <nav class="navbar navbar-expand-lg px-4">
             <div class="container-fluid">
-                <img src="img/logo.png" alt="" class="img-fluid nav-logo">
+                <img src="assets/new-logo.png" alt="" class="img-fluid nav-logo">
               <a class="navbar-brand" href="#">Saksham Homoeopathy</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -124,64 +145,37 @@
     <main>
 
         <!-- SECTION - Gallery -->
-        <section class="section-gallery">
-            <div class="🐛">
-                <ul class="gallery">
-                    <li class="item-list">
-                        <h2 class="🐜-title">Dragonfly</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Bug</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Beetle</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Bee</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Grasshopper</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Monarch</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Fly</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Ladybug</h2>
-                    </li>
-                    <li class="featured item-list">
-                        <h2 class="🐜-title">Dragon fly</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Fake Ladybug</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Amazing-Looking Bug</h2>
-                    </li>
-                    <li class="mantis item-list">
-                        <h2 class="🐜-title">Praying Mantis</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Bee</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Grasshopper</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Butterfly or Moth</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Beetle</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Catepillar</h2>
-                    </li>
-                    <li class="item-list">
-                        <h2 class="🐜-title">Ladybug</h2>
-                    </li>
-                </ul>
+        <section class="section-gallery-page">
+            <h1>Responsive Image Gallery</h1><hr>
+            <div id="gallery" class="container-fluid">  
+              <img src="assets/gp-1.jpg" class="img-responsive">
+              <img src="assets/gp-2.JPG" class="img-responsive">
+               <img src="assets/gp-3.jpg" class="img-responsive">
+              <img src="assets/gp-4.jpg" class="img-responsive">
+              <img src="assets/gp-5.jpg" class="img-responsive">
+            <img src="assets/drop.jpg" class="img-responsive">
+              <img src="assets/gp-7.JPG" class="card img-responsive">
+              <img src="assets/gp-8.jpg" class="img-responsive">
+              <img src="assets/login.jpg" class="img-responsive">
+              <img src="assets/gp-9.JPG" class="img-responsive">
+              <img src="assets/gp-10.jpg" class="img-responsive">
+            <img src="https://source.unsplash.com/1100x1600?female,portrait" class="img-responsive">
+            <img src="assets/gp-12.jpg" class="img-responsive">
+            <img src="assets/g-4.jpg" class="img-responsive">
+            <img src="assets/g-13.jpg" class="img-responsive">
+            
+            </div>
+            
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+            
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-body">
+                  </div>
+                </div>
+            
+              </div>
             </div>
         </section>
 
@@ -190,12 +184,12 @@
    <!-- SECTION- Footer -->
    <footer class="footer-section">
     <!-- Scroll to top button -->
-    <div class="scrollBtn d-flex justify-content-end ">
-       <button id="scrollToTopBtn" ><i class="fas fa-2x fa-chevron-up"></i></button>
+    <div class=" d-flex justify-content-end wtsap">
+       <button id="whatsapp"> <a href="https://wa.me/+919871794369/?text=Hello, I have a query"><i class="fa-2x fab fa-whatsapp"></i></a></button>
      </div>
    <div class="container">
        <div class="footer-cta  pt-5 pb-5">
-           <div class="row">
+           <div class="row  justify-content-center">
                <div class="col-xl-3 col-md-3 mb-30">
                    <div class="single-cta">
                        <i class="fas fa-map-marker-alt"></i>
@@ -226,11 +220,11 @@
            </div>
        </div>
        <div class="footer-content pt-5 pb-5">
-           <div class="row">
+           <div class="row justify-content-center">
                <div class="col-xl-3 col-lg-3 mb-50">
                    <div class="footer-widget">
                        <div class="footer-logo">
-                           <a href="index.html"><img src="assets/logo.png" class="img-fluid" alt="logo"></a>
+                           <a href="index.html"><img src="assets/new-logo.png" class="img-fluid" alt="logo"></a>
                        </div>
                        <div class="footer-text">
                            <p>The holistic approach to treat your health issue whether physical or mental. Dr.
@@ -252,12 +246,12 @@
                            <h3>Useful Links</h3>
                        </div>
                        <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">about</a></li>
+                           <li><a href="/">Home</a></li>
+                           <li><a href="/about">about</a></li>
                            <li><a href="#service">services</a></li>
                            <li><a href="#book">Appointment</a></li>
-                           <li><a href="contact.html">Contact</a></li>
-                           <li><a href="#">Blogposts</a></li>
+                           <li><a href="/contact">Contact</a></li>
+                           <li><a href="#blogs">Blogposts</a></li>
 
                        </ul>
                    </div>
@@ -268,7 +262,7 @@
                            <h3>Subscribe</h3>
                        </div>
                        <div class="footer-text mb-25">
-                           <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                           <p>Dont miss to subscribe to our new feeds, kindly fill the form below.</p>
                        </div>
                        <div class="subscribe-form">
                            <form action="#">
@@ -279,12 +273,14 @@
                        </div> 
                         <!-- btn css  -->
                        <div class="btn-row-1 ">
+                           <a href="https://play.google.com/store/apps/details?id=com.ibis.saksham_homeopathy&hl=en_IN&gl=US">
                        <button type="button" class="btn btn-outline-dark android-btn ">
                            <div class="row-android-btn">
                            <span><img src="https://img.icons8.com/fluency/48/000000/google-play.png"/></span>
                            <p> GET IT ON <br><b style="color: #fff;">Google Play</b></p>
                        </div>
                        </button>
+                   </a>
                        <button type="button" class="btn btn-outline-dark apple-store-btn"> 
                            <div class="row-apple-btn">
                              <span>  <i class="fab fa-apple"></i></span>
@@ -301,7 +297,7 @@
    </div>
    <div class="copyright-area">
        <div class="container">
-           <div class="row">
+           <div class="row justify-content-center">
                <div class="col-xl-5 col-lg-5 text-center text-lg-left">
                    <div class="copyright-text">
                        <p>Copyright &copy; 2021, All Right Reserved <a href="#">Saksham Homoeopathy</a> <br> ISO<span> 9001:2015</span></p>
@@ -310,11 +306,11 @@
                <div class="col-xl-5 col-lg-5 d-none d-lg-block text-right">
                    <div class="footer-menu">
                        <ul>
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About</a></li>
+                           <li><a href="/">Home</a></li>
+                           <li><a href="/about">About</a></li>
                            <li><a href="#book">Appointment</a></li>
-                           <li><a href="gallery">Gallery</a></li>
-                           <li><a href="contact.html">Contact</a></li>
+                           <li><a href="/gallery">Gallery</a></li>
+                           <li><a href="/contact">Contact</a></li>
                            
                        </ul>
                    </div>
@@ -337,9 +333,34 @@ crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/1744f3f671.js"></script>
 <!-- Gallery  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script> -->
+<script>
+     //Get the button
+     var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+$(document).ready(function(){
+  $("img").click(function(){
+  var t = $(this).attr("src");
+  $(".modal-body").html("<img src='"+t+"' class='modal-img'>");
+  $("#myModal").modal();
+});
+
+});
+</script>
 </body>
 
 </html>

@@ -26,6 +26,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 
     <style>
+
+        
         .accordion {
             width: 50%;
             margin: auto;
@@ -110,6 +112,27 @@
 </head>
 
 <body>
+    <div class="navigation hamburger">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+    
+        <div class="navigation__background">&nbsp;</div>
+    
+        <nav class="navigation__nav">
+            <ul class="navigation__list mob-ul">
+                <li class="navigation__item"><a href="index.html" class="navigation__link"><span>01</span>Home</a></li>
+                <li class="navigation__item"><a href="gallery.html" class="navigation__link"><span>02</span>Gallery</a></li>
+                <li class="navigation__item"><a href="#book" class="navigation__link"><span>03</span>Book</a></li>
+                <li class="navigation__item"><a href="#blogs" class="navigation__link"><span>04</span>Blog</a></li>
+                <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>05</span>Contact</a></li>
+                <li class="navigation__item"><a href="about.html" class="navigation__link"><span>06</span>About</a></li>
+                
+            </ul>
+        </nav>
+    </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
     <header class="header"></header>
 

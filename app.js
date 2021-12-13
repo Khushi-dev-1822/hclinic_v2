@@ -27,10 +27,7 @@ app.use(passport.session());
 
 var appointmentData;
 mongoose.connect(
-  "mongodb+srv://hclinic-23:saksham123@cluster0.vcbpx.mongodb.net/userDB?retryWrites=true&w=majority", (err, db)=>{
-   db.collection('appointments').collection.find().toArray(function(err, data){
-     appointmentData = data;
-   });
+  "mongodb+srv://hclinic-23:saksham123@cluster0.vcbpx.mongodb.net/userDB?retryWrites=true&w=majority"
 });
 
 const userSchema = new mongoose.Schema({
@@ -126,11 +123,6 @@ app.get('/admin-success', (req,res)=>{
   }
 });
 
-app.get('/data', (req,res)=>{
-  res.json({
-   appointmentData: appointmentData
-  })
-})
 
 app.post("/appointment", (req, res) => {
   const newAppointment = new Appointment({

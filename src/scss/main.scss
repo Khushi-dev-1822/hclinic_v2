@@ -1,7 +1,7 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
-@import "base/base";
 @import "base/typography";
+@import "base/base";
 @import "base/utilities";
 @import "base/animations";
 
@@ -14,6 +14,7 @@
 @import "components/galleryBlog";
 @import "components/about";
 @import "components/popup";
+@import "components/chatbot";
 
 
 @import "layout/navigation";

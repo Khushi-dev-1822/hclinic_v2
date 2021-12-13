@@ -49,6 +49,9 @@
 // }
 
 ///////new header
+
+
+
 .home {
   border-bottom: 3px solid #7ed56f;
 }
@@ -61,7 +64,7 @@ a {
 }
 .navigation__left {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../assets/header/slider_2.JPG);
+    url(../../assets/login.jpg);
   background-position: 80% !important;
   background-size: cover !important;
   height: 100vh !important;
@@ -96,17 +99,17 @@ a {
 .col-head-left {
   background-image: linear-gradient(to bottom, #55c57a, #28b485);
 }
-.col-head-right {
-  background-image: linear-gradient(to bottom, #55c57a, #28b485),
-    url(/assets/slider_2.JPG) !important;
-}
+// .col-head-right {
+//   background-image: linear-gradient(to bottom, #55c57a, #28b485),
+//     url(/assets/slider_2.JPG) !important;
+// }
 
-.navigation__right {
-  background-image: url(../assets/slider_1.JPG);
-  background-position: center;
-  background-size: cover;
-  height: 95vh;
-}
+// .navigation__right {
+//   background-image: url(../assets/slider_1.JPG);
+//   background-position: center;
+//   background-size: cover;
+//   height: 95vh;
+// }
 .header-logo {
   width: 50px !important;
 }
@@ -176,7 +179,7 @@ a {
 }
 
 .new-width {
-  width: 50% !important;
+  width: 65% !important;
 }
 
 @media (max-width: 1862px) {
@@ -285,9 +288,6 @@ a {
     font-size: 2.8rem !important;
     margin-top: 2.5rem !important;
   }
-  .responsive-width {
-    display: none;
-  }
   .u-padding {
     padding: 3rem 0.2rem !important;
   }
@@ -301,3 +301,52 @@ a {
     margin-bottom: 1rem !important;
   }
 }
+
+@media (max-width: 576px) {
+  .responsive-width {
+    display: none;
+  }
+}
+
+
+
+
+// New css
+// New css
+.header-p{
+  font-weight: 400 !important;
+}
+.div-center{
+  @include divCen;
+  color: $color-white;
+  &__one, &__two, &__three{
+    font-size: 4rem !important;
+    
+  }
+  &__one{
+    animation: moveInLeft 1s;
+  }
+  &__two{
+    animation: moveInLeft 2s;
+  }
+  &__three{
+    animation: moveInLeft 3s;
+  }
+
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+ 

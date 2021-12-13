@@ -1,6 +1,6 @@
 "use strict";
 // Counter To Count Number Visit
-const a = 0;
+var a = 0;
 $(window).scroll(function () {
   const oTop = $("#counter").offset().top - window.innerHeight;
 
@@ -23,118 +23,111 @@ $(window).scroll(function () {
 });
 
 // testimonial
+var	testim = document.getElementById("testim"),
+		testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+    testimLeftArrow = document.getElementById("left-arrow"),
+    testimRightArrow = document.getElementById("right-arrow"),
+    testimSpeed = 4500,
+    currentSlide = 0,
+    currentActive = 0,
+    testimTimer,
+		touchStartPos,
+		touchEndPos,
+		touchPosDiff,
+		ignoreTouch = 30;
+;
+window.onload = function() {
+    function playSlide(slide) {
+        for (var k = 0; k < testimDots.length; k++) {
+            testimContent[k].classList.remove("active");
+            testimContent[k].classList.remove("inactive");
+            testimDots[k].classList.remove("active");
+        }
 
-// vars
-("use strict");
-const testim = document.getElementById("testim"),
-  testimDots = Array.prototype.slice.call(
-    document.getElementById("testim-dots").children
-  ),
-  testimContent = Array.prototype.slice.call(
-    document.getElementById("testim-content").children
-  ),
-  testimLeftArrow = document.getElementById("left-arrow"),
-  testimRightArrow = document.getElementById("right-arrow"),
-  testimSpeed = 5000,
-  currentSlide = 0,
-  currentActive = 0,
-  testimTimer ,
-  touchStartPos,
-  touchEndPos,
-  touchPosDiff,
-  ignoreTouch = 30;
-window.onload = function () {
-  // Testim Script
-  function playSlide(slide) {
-    for (const k = 0; k < testimDots.length; k++) {
-      testimContent[k].classList.remove("active");
-      testimContent[k].classList.remove("inactive");
-      testimDots[k].classList.remove("active");
+        if (slide < 0) {
+            slide = currentSlide = testimContent.length-1;
+        }
+
+        if (slide > testimContent.length - 1) {
+            slide = currentSlide = 0;
+        }
+
+        if (currentActive != currentSlide) {
+            testimContent[currentActive].classList.add("inactive");            
+        }
+        testimContent[slide].classList.add("active");
+        testimDots[slide].classList.add("active");
+
+        currentActive = currentSlide;
+    
+        clearTimeout(testimTimer);
+        testimTimer = setTimeout(function() {
+            playSlide(currentSlide += 1);
+        }, testimSpeed)
     }
 
-    if (slide < 0) {
-      slide = currentSlide = testimContent.length - 1;
+    testimLeftArrow.addEventListener("click", function() {
+        playSlide(currentSlide -= 1);
+    })
+
+    testimRightArrow.addEventListener("click", function() {
+        playSlide(currentSlide += 1);
+    })    
+
+    for (var l = 0; l < testimDots.length; l++) {
+        testimDots[l].addEventListener("click", function() {
+            playSlide(currentSlide = testimDots.indexOf(this));
+        })
     }
 
-    if (slide > testimContent.length - 1) {
-      slide = currentSlide = 0;
-    }
+    playSlide(currentSlide);
 
-    if (currentActive != currentSlide) {
-      testimContent[currentActive].classList.add("inactive");
-    }
-    testimContent[slide].classList.add("active");
-    testimDots[slide].classList.add("active");
+    // keyboard shortcuts
+    document.addEventListener("keyup", function(e) {
+        switch (e.keyCode) {
+            case 37:
+                testimLeftArrow.click();
+                break;
+                
+            case 39:
+                testimRightArrow.click();
+                break;
 
-    currentActive = currentSlide;
+            case 39:
+                testimRightArrow.click();
+                break;
 
-    clearTimeout(testimTimer);
-    testimTimer = setTimeout(function () {
-      playSlide((currentSlide += 1));
-    }, testimSpeed);
-  }
+            default:
+                break;
+        }
+    })
+		
+		testim.addEventListener("touchstart", function(e) {
+				touchStartPos = e.changedTouches[0].clientX;
+		})
+	
+		testim.addEventListener("touchend", function(e) {
+				touchEndPos = e.changedTouches[0].clientX;
+			
+				touchPosDiff = touchStartPos - touchEndPos;
+			
+				console.log(touchPosDiff);
+				console.log(touchStartPos);	
+				console.log(touchEndPos);	
 
-  testimLeftArrow.addEventListener("click", function () {
-    playSlide((currentSlide -= 1));
-  });
-
-  testimRightArrow.addEventListener("click", function () {
-    playSlide((currentSlide += 1));
-  });
-
-  for (const l = 0; l < testimDots.length; l++) {
-    testimDots[l].addEventListener("click", function () {
-      playSlide((currentSlide = testimDots.indexOf(this)));
-    });
-  }
-
-  playSlide(currentSlide);
-
-  // keyboard shortcuts
-  document.addEventListener("keyup", function (e) {
-    switch (e.keyCode) {
-      case 37:
-        testimLeftArrow.click();
-        break;
-
-      case 39:
-        testimRightArrow.click();
-        break;
-
-      case 39:
-        testimRightArrow.click();
-        break;
-
-      default:
-        break;
-    }
-  });
-
-  testim.addEventListener("touchstart", function (e) {
-    touchStartPos = e.changedTouches[0].clientX;
-  });
-
-  testim.addEventListener("touchend", function (e) {
-    touchEndPos = e.changedTouches[0].clientX;
-
-    touchPosDiff = touchStartPos - touchEndPos;
-
-    console.log(touchPosDiff);
-    console.log(touchStartPos);
-    console.log(touchEndPos);
-
-    if (touchPosDiff > 0 + ignoreTouch) {
-      testimLeftArrow.click();
-    } else if (touchPosDiff < 0 - ignoreTouch) {
-      testimRightArrow.click();
-    } else {
-      return;
-    }
-  });
-};
-
+			
+				if (touchPosDiff > 0 + ignoreTouch) {
+						testimLeftArrow.click();
+				} else if (touchPosDiff < 0 - ignoreTouch) {
+						testimRightArrow.click();
+				} else {
+					return;
+				}
+			
+		})
+}
 // benefit section
-
 var link = $(".com__nav-link");
 var linkParent = link.parent("li");
 var section = $(".com__section");
@@ -158,8 +151,14 @@ var switchTab = function () {
   linkParent.removeClass("active");
   p.addClass("active");
 
+  
+
   return false;
 };
+
+// setTimeout(function(){
+//   document.querySelector(".one").click();
+// }, 1000);
 
 link.on("click", switchTab);
 
@@ -176,24 +175,19 @@ activeFirst();
 
 
 
-// imgurls
- let imgArr = [
-    "assets/header/slider_1.JPG",
-    "assets/header/slider_2.JPG",
-    "assets/login.JPG",
-  ]
-  console.log(imgArr);
-  let element = document.getElementById("changeBg");
-  setInterval(function(){
-      element.style.backgroundImage = `url(${imgArr[Math.floor(Math.random() * 3)]})`;
-  }, 3000);
-
-
-
-
+// header URLS
+// FIXME - Bug found
+//  let imgArr = [
+//     "assets/slider_1.JPG",
+//     "assets/login.JPG",
+//   ]
+//   console.log(imgArr);
+//   let element = document.getElementById("changeBg");
+//   setInterval(() => {
+//       element.style.backgroundImage = `url(${imgArr[Math.floor(Math.random() * 3)]})`;
+//     }, 3000);
 
   // gallery
-
   const swiper = new Swiper('.swiper-container', {
     speed: 500,
     pagination: {
@@ -214,26 +208,67 @@ activeFirst();
 
   
   // scrollup
-  
+// var mybutton = document.getElementById("myBtn");
+// window.onscroll = function() {scrollFunction()};
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     mybutton.style.display = "block";
+//   } else {
+//     mybutton.style.display = "none";
+//   }
+// }
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
+
+//date/time
+var dateControl = document.querySelector('input[type="date"]');
+dateControl.value = '2021-12-10';
+var dateControl = document.querySelector('input[type="time"]');
+dateControl.value = '00:00';
 
 
- //Get the button
-var mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
 
 
+ // chatbot
+
+ document.querySelector('.bot').addEventListener('click', function(){
+   document.querySelector('.chatbot').classList.toggle('hidden');
+
+ })
+
+// login/signup form
+
+const loginNow = document.getElementById('loginNow');
+const signupNow = document.getElementById('signupNow');
+const signup = document.querySelector('.signup');
+const login = document.querySelector('.login');
+// SIGNUP
+signupNow.addEventListener('click', ()=>{
+  signup.classList.remove('hidden');
+  login.classList.add('hidden');
+})
+// LOGIN
+loginNow.addEventListener('click', ()=>{
+  signup.classList.add('hidden');
+  login.classList.remove('hidden');
+})
 
 
+// donate overlay
 
- 
+//  setInterval(function(){
+//     document.querySelector
+//     ('.donate-popup').classList.remove('hidden')
+//     console.log('popup')
+//   },
+   
+//  3000);
+
+
+// document.querySelector('.openWindow').addEventListener('click', function(){
+//   document.querySelector
+//     ('.popup2').classList.add('hidden');
+// })
+

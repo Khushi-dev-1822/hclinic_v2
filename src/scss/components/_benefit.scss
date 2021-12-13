@@ -12,7 +12,10 @@ a {
   color: $color-white !important;
   font-size: 2.5rem !important;
 }
-
+.benefit-heading{
+  color: $color-white !important;
+ 
+}
 body {
   font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
@@ -28,8 +31,7 @@ body {
   &__content {
     position: relative;
     flex: 8;
-    background: #404855;
-   
+    background: #090910;
     padding: 10vh 10vw;
   }
 
@@ -151,6 +153,8 @@ body {
     transform: scaleX(0);
     transform-origin: right center;
     transition: $ease;
+    color: $color-white !important;
+    top: 0 !important;
 
     &.flex-row {
       flex-flow: row wrap;
@@ -249,6 +253,17 @@ body {
 
 
 // New
+.on-box{
+  color: $color-white !important;
+  font-size: 2rem !important;
+  
+}
+@media (max-width:1366px)  {
+.com__nav-link{
+  display:  none !important;
+}
+}
 
-
+// 768p
+// 1366px
 

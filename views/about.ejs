@@ -13,7 +13,7 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS  -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="assets/logo.png">
     <!-- BOOSTRAP 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -23,9 +23,6 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
 
     <style>
-      html{
-        scroll-behavior: smooth !important;
-      }
       a{
       color: black !important;
   }
@@ -107,7 +104,7 @@
   /* Parallax */
   .parallax1 {
     position: relative;
-    background-image: url("assets/edited/IMG_1651.jpg");
+    background-image: url("assets/about-1.jpg") !important;
     min-height: 50vh; 
     position: relative;
     background-attachment: fixed;
@@ -120,7 +117,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url("assets/edited/IMG_1589.jpg");
+    background-image: url("assets/about-chest.jpg") !important;
     min-height: 50vh; 
     position: relative;
     background-attachment: fixed;
@@ -143,7 +140,7 @@
   }
   .parallax3 {
     position: relative;
-    background-image: url("assets/edited/award.jpg");
+    background-image: url("assets/award.jpg") !important;
     min-height: 50vh; 
     position: relative;
     background-attachment: fixed;
@@ -206,13 +203,33 @@
   ::-webkit-scrollbar-thumb {
         background-color: rgba(161, 181, 201, .8);
   }
-  
+
   </style>
 </head>
 
 <body>
+  <div class="navigation hamburger">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+    <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+    </label>
+
+    <div class="navigation__background">&nbsp;</div>
+
+    <nav class="navigation__nav">
+        <ul class="navigation__list mob-ul">
+            <li class="navigation__item"><a href="index.html" class="navigation__link"><span>01</span>Home</a></li>
+            <li class="navigation__item"><a href="gallery.html" class="navigation__link"><span>02</span>Gallery</a></li>
+            <li class="navigation__item"><a href="#book" class="navigation__link"><span>03</span>Book</a></li>
+            <li class="navigation__item"><a href="#blogs" class="navigation__link"><span>04</span>Blog</a></li>
+            <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>05</span>Contact</a></li>
+            <li class="navigation__item"><a href="about.html" class="navigation__link"><span>06</span>About</a></li>
+            
+        </ul>
+    </nav>
+</div>
+  <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button> -->
   <main>
     <!-- SECTION- About section -->
     <!-- <section class=" section-about ag-grid-block">
@@ -285,26 +302,25 @@
       <section class="page">
         <div class="parallax1"></div>
         <div class="paragraph first">
-          <p><span>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p><span>D</span>octor Shubhangi is Highly dedicated towards health and well being of her patients and society at large. She has been successfully practicing for over 25 years and has helped Thousands of patience to live better and healthier life.
+
+            At Saksham Homoeopathic Clinic,we are keen in providing our patients Holistic treatment i.e.Homoeopathic treatment along with yoga, diet and nutrition, acupressure ,importance of healthy habits as per need of the case. Dr Shubhangi has received many awards for her outstanding work and popularity. However,the words of gratitude from patients and their blessings from heart are the biggest accolades according to her and that makes her happiest . Vision Of Saksham homeopathic clinic is to render services to people from all walks of life And we are keen to help everyone to gain the best possible health through classical homeopathy and our services curated keeping in mind need of the patients. Saksham Homoeopathic Clinic has a wide Patient base in India be from villages,towns or metro cities from India and several other countries. We have been successfully helping people from 5 continents. It gives us immense pleasure to say that from simple common cold or hairfall to complex cases like CKD or neurological diseases,we have been instrumental in managing several thousand cases very well. We have helped people avoid surgeries in several cases of Sinusitis, Recurrent Tonsillitis,uterine fibroid,PCOD,Renal stones,Fibroadenomas.</p>
         </div>
         <div class="parallax2">
           <div class="overlay"></div>
-          <h2>Beautiful</h2>
+          <h2>Our Vision</h2>
         </div>
         <div class="paragraph second">
-          <p><span>O</span>rci porta non pulvinar neque laoreet suspendisse interdum. Nulla malesuada pellentesque elit eget gravida. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Pharetra convallis posuere morbi leo urna molestie. Volutpat lacus laoreet non curabitur gravida. Ornare aenean euismod elementum nisi quis eleifend quam. Fames ac turpis egestas sed tempus urna. Nisl nisi scelerisque eu ultrices vitae auctor. A iaculis at erat pellentesque adipiscing commodo elit at. Nulla posuere sollicitudin aliquam ultrices. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Et molestie ac feugiat sed lectus. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Neque viverra justo nec ultrices dui sapien eget mi.</p>
+          <p><span>O</span>1. To provide world class treatment for all health disorders, acute,sub-acute and chronic ailments.
+            2. To help people in prevention of diseases by strengthening immunity.
+            3.Health for everyone.Helping people from all walks of life and reaching out to needy.</p>
         </div>
         <div class="parallax3"></div>
         <div class="paragraph third">
           <p><span>A</span>uctor neque vitae tempus quam pellentesque. In nibh mauris cursus mattis molestie a iaculis at. Sem integer vitae justo eget magna fermentum iaculis eu non. Eget velit aliquet sagittis id. Sed libero enim sed faucibus turpis in eu mi bibendum. Blandit libero volutpat sed cras. Ultricies integer quis auctor elit sed vulputate mi sit. Eget lorem dolor sed viverra ipsum nunc. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Ac placerat vestibulum lectus mauris ultrices eros in cursus. Integer vitae justo eget magna fermentum iaculis eu. Auctor elit sed vulputate mi sit amet mauris commodo.</p>
         </div>
       </section>
-
-
-
 </main>
-
 
     <!-- SECTION- Footer -->
     <footer class="footer-section">
@@ -387,7 +403,7 @@
                              <h3>Subscribe</h3>
                          </div>
                          <div class="footer-text mb-25">
-                             <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                             <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
                          </div>
                          <div class="subscribe-form">
                              <form action="#">

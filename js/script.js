@@ -229,18 +229,25 @@ dateControl.value = '00:00';
 
  document.querySelector('.bot').addEventListener('click', function(){
    document.querySelector('.chatbot').classList.toggle('hidden');
-   console.log('Cliked')
+
  })
 
-// benefit section
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-    document.querySelector('.com__nav-item').classList.remove('.active');
-  } else {
-    document.body.style.backgroundColor = "pink";
-  }
-}
+// login/signup form
 
-var x = window.matchMedia("(max-width: 768px)")
-myFunction(x) // Call listener function at run time
-x.addEventListener(myFunction) // Attach listener function on state changes
+const loginNow = document.getElementById('loginNow');
+const signupNow = document.getElementById('signupNow');
+const signup = document.querySelector('.signup');
+const login = document.querySelector('.login');
+// SIGNUP
+signupNow.addEventListener('click', ()=>{
+  signup.classList.remove('hidden');
+  login.classList.add('hidden');
+})
+// LOGIN
+loginNow.addEventListener('click', ()=>{
+  signup.classList.add('hidden');
+  login.classList.remove('hidden');
+})
+
+
+

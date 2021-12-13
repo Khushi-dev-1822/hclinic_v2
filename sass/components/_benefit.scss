@@ -258,9 +258,12 @@ body {
   font-size: 2rem !important;
   
 }
-@media (min-width:300px) and (max-width:768px) {
-  
+@media (max-width:1366px)  {
+.com__nav-link{
+  display:  none !important;
 }
+}
+
 // 768p
 // 1366px
 

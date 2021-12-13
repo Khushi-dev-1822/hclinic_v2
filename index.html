@@ -86,7 +86,7 @@
                       <a class="nav-link " href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="  nav-link  login-btn text-white" href="#login" >Login</a>
+                        <a class="  nav-link  login-btn text-white" href="#login">Login</a>
                       </li>
                       <!-- <div class="box">
                         <form name="search">
@@ -632,14 +632,36 @@
                                 <input type="text" class="form__input" placeholder="Phone Number" id="email" name="patient_phone" required>
                                 <label for="name" class="form__label">Phone Number</label>
                             </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Age" id="age" name="patient_age" required>
+                                <label for="name" class="form__label">Age</label>
+                            </div>
 
                             <div class="form__group">
                                 <input class="form__input" name="appointment_date" type="date" value="10-12-2021" >
                                 
                             </div>
-                            <div class="form__group mt-4">
+                            <!-- <div class="form__group mt-4">
                                 <input class="form__input" type="time" id="appt" name="appointment_time">
+                            </div> -->
+                            <div class="form__group mt-4">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                      Female
+                                    </label>
+    
+                                </div>
                             </div>
+                           
                             <div class="form__group">
                                 <button class="btn btn--green nav-link buttons btn login-btn text-white p u-margin-top-small" type="submit">Book &rarr;</button>
                             </div>
@@ -673,12 +695,32 @@
                                 <input type="email" class="form__input" placeholder="Phone number" id="email" name="patient_phone" required>
                                 <label for="name" class="form__label">Phone number</label>
                             </div>
-
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Age" id="age" name="patient_age" required>
+                                <label for="name" class="form__label">Age</label>
+                            </div>
                             <div class="form__group">
                                 <input class="form__input" placeholder="date" name="appointment_date" type="date">
                             </div>
                             <div class="form__group mt-4">
                                 <input class="form__input" placeholder="Time" name="appointment_time" type="time" id="appt" name="appt">
+                            </div>
+                            <div class="form__group mt-4">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                      Female
+                                    </label>
+    
+                                </div>
                             </div>
                             <div class="form__group">
                                 <button class="btn btn--green buttons nav-link btn login-btn text-white p u-margin-top-small" type="submit">Book &rarr;</button>
@@ -912,7 +954,7 @@
                             </div>
                             <div class="right-box__main p-5">
                                  <!-- SECTION - LOGIN -->
-                                <form class="form3 login " action="/login">
+                                <form class="form3 login  " action="/login">
                                     <h4 class="heading u-margin-bottom-small"> Login</h4>
                                     <div class="row">
                                         <div class="col">
@@ -939,7 +981,7 @@
                                             </div>
                                         </div>
                                         <div class="col-1-of-2">
-                                            <span>Not a member? <a href="#" class="changeClass" >Signup Now</a>
+                                            <span>Not a member? <a href="#" class="changeClass" id="signupNow">Signup Now</a>
                                             </span>
                                         </div>
                                     </div>
@@ -958,7 +1000,7 @@
 
                                 </form>
                                 <!-- SECTION - SIGNUP -->
-                                <form class="form3 signup  hidden" action="/signup">
+                                <form class="form3 signup hidden " action="/signup">
                                     <h6 class="heading u-margin-bottom-small "> Sign Up</h6>
                                     <div class="row">
                                         <div class="col">
@@ -980,7 +1022,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col">
                                             <div class="form__group  u-margin-bottom-small">
                                                 <input type="text" class="form__input" placeholder="dd/mm/yy" id="name"
@@ -989,7 +1031,7 @@
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="row">
                                         <div class="col">
                                             <div class="form__group">
@@ -1008,16 +1050,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row pt-5 pb-5">
                                         <div class="col-1-of-2">
-                                            <div class="form__group u-mt-btn ">
-                                                <button class="btn btn--white " type="submit">Signup &rarr;</button>
+                                            <div class="form__group ">
+                                                <button class="btn  loginBtn" type="submit">Signup &rarr;</button>
                                             </div>
                                         </div>
                                         <div class="col-1-of-2">
-                                            <span class=" ">Already a member? <a href="#">Login Now</a>
+                                            <span>Already a member? <a href="#" class="changeClass" id="loginNow" >login Now</a>
                                             </span>
-                                        </div>
+                                        </div>                        
                                     </div>
                                 </form>
                             </div>
@@ -1042,7 +1084,7 @@
               </div>
             </div>
             <div class="ChatItem-chatContent">
-              <div class="ChatItem-chatText">sound isnt working on my phone anymore</div>
+              <div class="ChatItem-chatText">Welcome to Saksham Homoeopathy! 👋</div>
               <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:49</div>
             </div>
           </div>

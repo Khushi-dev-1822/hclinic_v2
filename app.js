@@ -25,9 +25,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+var appointmentData;
 mongoose.connect(
-  "mongodb+srv://hclinic-23:saksham123@cluster0.vcbpx.mongodb.net/userDB?retryWrites=true&w=majority"
-);
+  "mongodb+srv://hclinic-23:saksham123@cluster0.vcbpx.mongodb.net/userDB?retryWrites=true&w=majority", (err, db)=>{
+   db.collection('appointments').collection.find().toArray(function(err, data){
+     appointmentData = data;
+   });
+});
 
 const userSchema = new mongoose.Schema({
   adminUsername: String,
@@ -50,8 +54,8 @@ const appointmentSchema = new mongoose.Schema({
   patientPhone: String,
   patientEmail: String,
   bookingDate: String,
-  bookingTime: String,
-  description: String,
+  patientSex: String,
+  patientAge: String,
 });
 
 const Appointment = new mongoose.model("Appointment", appointmentSchema);
@@ -87,7 +91,8 @@ app.get("/admin-dashboard", (req, res) => {
       patientPhone: { $ne: null },
       patientEmail: { $ne: null },
       bookingDate: { $ne: null },
-      bookingTime: { $ne: null },
+      patientAge: { $ne: null },
+      patientSex: { $ne: null },
     },
     function (err, foundAppointment) {
       if (err) {
@@ -112,13 +117,29 @@ app.get("/logout", (req, res) => {
   res.redirect("/admin");
 });
 
+app.get('/admin-success', (req,res)=>{
+  if(req.isAuthenticated()){
+    res.render('admin-success');
+  }else {
+    res.redirect('/admin-register');
+    prompt('failed registering new admin')
+  }
+});
+
+app.get('/data', (req,res)=>{
+  res.json({
+   appointmentData: appointmentData
+  })
+})
+
 app.post("/appointment", (req, res) => {
   const newAppointment = new Appointment({
     patientName: req.body.patient_name,
     patientPhone: req.body.patient_phone,
     patientEmail: req.body.patient_email,
     bookingDate: req.body.appointment_date,
-    bookingTime: req.body.appointment_time,
+    patientAge: req.body.patient_age,
+    patientSex: req.body.appointment_time,
   });
   newAppointment.save((err) => {
     if (err) {
@@ -130,7 +151,7 @@ app.post("/appointment", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-
+  
 });
 
 app.post("/login", (req, res) => {
@@ -147,7 +168,7 @@ app.post("/admin-register", (req, res) => {
         res.redirect("/admin-register");
       } else {
         passport.authenticate("local")(req, res, function () {
-          res.redirect("/admin-dashboard");
+          res.redirect("/admin-success");
         });
       }
     }

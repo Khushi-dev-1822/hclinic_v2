@@ -1817,6 +1817,31 @@ a {
 .header-p {
   font-weight: 400 !important; }
 
+.div-center {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: #fff; }
+  .div-center__one, .div-center__two, .div-center__three {
+    font-size: 4rem !important; }
+  .div-center__one {
+    animation: moveInLeft 1s; }
+  .div-center__two {
+    animation: moveInLeft 2s; }
+  .div-center__three {
+    animation: moveInLeft 3s; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 ul {
   margin: 0px;
   padding: 0px; }

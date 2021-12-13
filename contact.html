@@ -133,7 +133,7 @@
             </ul>
         </nav>
     </div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+    <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button> -->
     <header class="header"></header>
 
     <main>
@@ -203,7 +203,8 @@
                                 </div>
                                 <div class="col d-flex justify-content-end">
                                     <p class="heading  pointer"> <a class="map"
-                                            href="https://www.google.com/maps/dir/28.5013632,77.0219014/saksham+homeopathic+clinic/@28.5038059,77.0248138,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390d197a4408a385:0xe292b5b3ff07e6a9!2m2!1d77.0586062!2d28.5038191">Map</a>
+                                        onclick="getLocation()"   href="#">Map</a>
+                                       
                                     </p>
                                 </div>
                             </div>
@@ -502,6 +503,7 @@
         </div>
     </footer>
 
+    
 
 
 
@@ -518,19 +520,26 @@ crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
 <script >
-     //Get the button
-var mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+
+var lati ;
+var longi ;
+var x = document.querySelector("demo");
+// var mapLocation = "/maps/dir/"+lati+" "+longi+"/saksham+homeopathic+clinic/@28.5043971,77.0234675,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390d197a4408a385:0xe292b5b3ff07e6a9!2m2!1d77.0586062!2d28.5038191"
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+
+function showPosition(position) {
+   lati =   position.coords.latitude;
+   longi =  position.coords.longitude;
+   var mapLocation = "/maps/dir/"+lati+" "+longi+"/saksham+homeopathic+clinic/@28.5043971,77.0234675,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390d197a4408a385:0xe292b5b3ff07e6a9!2m2!1d77.0586062!2d28.5038191"
+   console.log(lati, longi);
+   console.log(mapLocation);
 }
 
 </script>

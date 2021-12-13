@@ -248,3 +248,6 @@ loginNow.addEventListener('click', ()=>{
   signup.classList.add('hidden');
   login.classList.remove('hidden');
 })
+
+
+

@@ -67,10 +67,10 @@
                 <a class="navbar-brand fs-4 text-white fw-bolder" href="#">Saksham Homoeopathy</a>
                </div>
                <div class="div-center">
-                   <h1 class="div-center__one">Holistic.</h1>
-                   <h1 class="div-center__two" >Scientific.</h1>
-                   <h1 class="div-center__three">Safest.</h1>
-               </div>
+                <h1 class="div-center__one">Holistic.</h1>
+                <h1 class="div-center__two" >Scientific.</h1>
+                <h1 class="div-center__three">Safest</h1>
+                </div>
               </div>
               <div class="col-8 mob-width-seven navigation__middle p-0">
                   <div class="navigation__middle-top">
@@ -894,7 +894,147 @@
           
        </div>
    </footer>
-  
+    <div class="popup" id="login">
+        <a href="#" class="popup__close">&times;</a>
+        <div class="popup__content">
+         
+             <!-- SECTION- login form section -->
+        <section class="section-login">
+            <div class="container">
+                <div class="row">
+                    <div class="col  bg-green popup__left">
+                        <div class="left-box">
+                            <div class="left-box__text ">
+                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, similique. -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bg-blue popup__right">
+                       
+                        <div class="right-box ">
+                            <div class="right-box__top d-flex justify-content-end p-2">
+                               .....
+                            </div>
+                            <div class="right-box__main p-5">
+                                 <!-- SECTION - LOGIN -->
+                                <form class="form3 login  " action="/login">
+                                    <h4 class="heading u-margin-bottom-small"> Login</h4>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="email" class="form__input" placeholder="Username"
+                                                    id="email" required>
+                                                <label for="email" class="form__label">Username</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="password" class="form__input" placeholder="Password"
+                                                    id="password" required>
+                                                <label for="password" class="form__label">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-5 pb-5">
+                                        <div class="col-1-of-2">
+                                            <div class="form__group ">
+                                                <button class="btn  loginBtn" type="submit">Login &rarr;</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-1-of-2">
+                                            <span>Not a member? <a href="#" class="changeClass" id="signupNow">Signup Now</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- OAuth Authentication -->
+                                    <div class="container1">
+                                        <!-- Text -->
+                                        <div class="container1__content">
+                                            <img src="https://img.icons8.com/color/48/000000/twitter--v2.png"/>
+                                            <img src="https://img.icons8.com/fluency/48/000000/google-logo.png"/>
+                                            <img src="https://img.icons8.com/color/48/000000/facebook-new.png"/>
+                                        </div>
+
+                                        <!-- Separator line -->
+                                        <div class="container1__separator"></div>
+                                    </div>
+
+                                </form>
+                                <!-- SECTION - SIGNUP -->
+                                <form class="form3 signup hidden " action="/signup">
+                                    <h6 class="heading u-margin-bottom-small "> Sign Up</h6>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group  u-margin-bottom-small">
+                                                <input type="text" class="form__input" placeholder="Full Name" id="name"
+                                                    required>
+                                                <label for="name" class="form__label">Full Name</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group  u-margin-bottom-small">
+                                                <input type="text" class="form__input" placeholder="Phone" id="name"
+                                                    required>
+                                                <label for="name" class="form__label">Phone</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- <div class="row">
+                                        <div class="col">
+                                            <div class="form__group  u-margin-bottom-small">
+                                                <input type="text" class="form__input" placeholder="dd/mm/yy" id="name"
+                                                    required>
+                                                <label for="name" class="form__label">DOB</label>
+                                            </div>
+
+                                        </div>
+                                    </div> -->
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="email" class="form__input" placeholder="Username"
+                                                    id="email" required>
+                                                <label for="email" class="form__label">Username</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form__group">
+                                                <input type="password" class="form__input" placeholder="Password"
+                                                    id="password" required>
+                                                <label for="password" class="form__label">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-5 pb-5">
+                                        <div class="col-1-of-2">
+                                            <div class="form__group ">
+                                                <button class="btn  loginBtn" type="submit">Signup &rarr;</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-1-of-2">
+                                            <span>Already a member? <a href="#" class="changeClass" id="loginNow" >login Now</a>
+                                            </span>
+                                        </div>                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        </div>
+    </div>
 
 <section class="chatbot hidden">
     <div class="ChatWindow">
@@ -923,7 +1063,7 @@
 
 
 
-<button class="btn btn-primary openWindow">Donate now</button>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

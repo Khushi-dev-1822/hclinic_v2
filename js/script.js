@@ -229,7 +229,22 @@ dateControl.value = '00:00';
 
  document.querySelector('.bot').addEventListener('click', function(){
    document.querySelector('.chatbot').classList.toggle('hidden');
-   console.log('Cliked')
+
  })
 
-// benefit section
+// login/signup form
+
+const loginNow = document.getElementById('loginNow');
+const signupNow = document.getElementById('signupNow');
+const signup = document.querySelector('.signup');
+const login = document.querySelector('.login');
+// SIGNUP
+signupNow.addEventListener('click', ()=>{
+  signup.classList.remove('hidden');
+  login.classList.add('hidden');
+})
+// LOGIN
+loginNow.addEventListener('click', ()=>{
+  signup.classList.add('hidden');
+  login.classList.remove('hidden');
+})

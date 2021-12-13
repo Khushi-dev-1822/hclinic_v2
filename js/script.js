@@ -151,8 +151,14 @@ var switchTab = function () {
   linkParent.removeClass("active");
   p.addClass("active");
 
+  
+
   return false;
 };
+
+// setTimeout(function(){
+//   document.querySelector(".one").click();
+// }, 1000);
 
 link.on("click", switchTab);
 
@@ -250,4 +256,19 @@ loginNow.addEventListener('click', ()=>{
 })
 
 
+// donate overlay
+
+//  setInterval(function(){
+//     document.querySelector
+//     ('.donate-popup').classList.remove('hidden')
+//     console.log('popup')
+//   },
+   
+//  3000);
+
+
+// document.querySelector('.openWindow').addEventListener('click', function(){
+//   document.querySelector
+//     ('.popup2').classList.add('hidden');
+// })
 

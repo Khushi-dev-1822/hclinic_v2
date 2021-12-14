@@ -8,38 +8,105 @@
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-        .book-details{
-  padding-left: 0px !important;
-}
+    
 .section-left{
     height: 100vh !important;
 }
-.left-txt{
-    padding: 2rem 0;
-}
+
 .booking-head{
     background-image: linear-gradient(to right, #7ed56f, #28b485);
 }
-.card-table{
-    display:table;
- 
 
-}
-.book-number{
-    display: table-cell;
-    vertical-align: middle;
 
-   
-    
+
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
-.cards{
-    border-radius: .8rem;
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-.book-details{
-    display: table-cell;
-    list-style-type: none !important;
-    
+
+.sidebar a:hover {
+  color: #f1f1f1;
 }
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111 !important;
+  color: white !important;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+table {
+    width: 100% !important;
+    display:block;
+    border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+tr{
+  width: 100% !important;
+}
+thead {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+}
+tbody {
+    height: 90vh;
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+}
+
+tr:nth-child(even){background-color: #f2f2f2};
 
     </style>
 </head>
@@ -64,33 +131,16 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-2 section-left border ">
-            <div class="container">
-                <div class="row align-items-start left-txt">
-                  <div class="col">
-                    Appointments
-                  </div>
-                </div>
-                <div class="row align-items-center left-txt">
-                  <div class="col">
-                   lorem
-                  </div>
-                </div>
-                <div class="row align-items-end  left-txt">
-                  <div class="col">
-                    lorem
-                  </div>
-                </div>
-                <div class="row align-items-end left-txt">
-                  <div class="col">
-                    lorem
-                  </div>
-                </div>
-                <div class="row align-items-end left-txt">
-                  <div class="col">
-                    lorem
-                  </div>
-                </div>
-              </div>
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">Admin</a>
+            <a href="#">Appointments</a>
+            <a href="#">Patients Record</a>
+            <a href="#">Fee </a>
+          </div>
+          <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+          </div>
         </div>
         <div class="col section-right border px-0">
             <div class="booking-head border p-2">
@@ -98,28 +148,368 @@
             </div>
          <div class="container-fluid p-4">
              <div class="container-fluid">
-                 <div class="row">
-                     <%    patientWithAppointment.forEach( (appointment)=>{    %>
-                        <div class="col-md-4 col-lg-3 px-1">
-                            <div class="booking-cards mt-4">
-                                <div class="card cards " style="width: 18rem;">
-                                    <div class="card-body card-table">
-                                     <ul class="book-details">
-                                        <li><strong>Nmae: </strong><%= appointment.patientName %></li>
-                                        <li><strong>Phone no: </strong><%= appointment.patientPhone %></li>
-                                        <li><strong>Email: </strong><%= appointment.patientEmail %></li>
-                                        <li><strong>Date: </strong><%= appointment.bookingDate %></li>
-                                        <li><strong>Time: </strong><%= appointment.bookingTime %></li>
-                                     </ul>
-                                    </div>
-                                  </div>
-                             </div>
-                        </div>
-                     <%  }); %>
-                 </div>
+                 <div>
+                  <table >
+                    <tr >
+                      <th>Name</th>
+                      <th>Email Address</th>
+                      <th>Phone Number</th>
+                      <th>Age</th>
+                      <th>Time</th>
+                      <th>Date</th>
+                      <th>Sex</th>                    
+                    </tr>
+                    <tr>
+                      <td >Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Adam</td>
+                      <td>Johnson</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                  </table>
+                </div>
              </div>
-             
-
          </div>
         </div>
       </div>
@@ -132,6 +522,17 @@
         setInterval(()=>{
             location.reload();
         },20000);
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
     </script>
 
 <!-- Bootstrap JS -->

@@ -1280,6 +1280,19 @@ body {
   height: 40px !important;
   width: 40px !important; }
 
+.js-response {
+  animation: testim-content-in 1s; }
+
+@keyframes testim-content-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
 .ChatWindow {
   position: fixed;
   top: 20%;
@@ -1675,7 +1688,7 @@ a {
   background-image: linear-gradient(to bottom, #55c57a, #28b485); }
 
 .header-logo {
-  width: 50px !important; }
+  width: 70px !important; }
 
 .my-row {
   margin: 0px !important; }
@@ -1868,7 +1881,7 @@ ul {
   margin-bottom: 2px; }
 
 .cta-text span {
-  color: #757575;
+  color: #ea830e !important;
   font-size: 15px; }
 
 .footer-content {
@@ -1888,12 +1901,13 @@ ul {
   width: 30% !important; }
 
 .footer-logo img {
-  max-width: 50px; }
+  max-width: 70px; }
 
 .footer-text p {
   margin-bottom: 14px;
   font-size: 14px;
-  color: #7e7e7e !important;
+  color: #b3afaf !important;
+  font-weight: 700;
   line-height: 28px; }
 
 .footer-social-icon span {

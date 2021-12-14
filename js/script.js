@@ -235,6 +235,8 @@ dateControl.value = '00:00';
 
  document.querySelector('.bot').addEventListener('click', function(){
    document.querySelector('.chatbot').classList.toggle('hidden');
+   document.querySelector('.js-responseCard').style.opacity = '1';
+   document.querySelector('.js-responseCard').classList.add('js-response');
 
  })
 

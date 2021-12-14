@@ -26,7 +26,7 @@ ul {
   margin-bottom: 2px;
 }
 .cta-text span {
-  color: #757575;
+  color: #ea830e !important;
   font-size: 15px;
 }
 .footer-content {
@@ -46,12 +46,13 @@ ul {
   width: 30% !important;
 }
 .footer-logo img {
-  max-width: 50px;
+  max-width: 70px;
 }
 .footer-text p {
   margin-bottom: 14px;
   font-size: 14px;
-  color: #7e7e7e !important;
+  color: #b3afaf !important;
+  font-weight: 700;
   line-height: 28px;
 }
 .footer-social-icon span {
@@ -107,6 +108,7 @@ ul {
   float: left; 
   width: 50%;
   margin-bottom: 12px;
+  
 }
 .footer-widget ul li a:hover {
   color: #ff5e14 !important;

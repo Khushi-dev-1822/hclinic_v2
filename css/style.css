@@ -1,9 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
 body {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -330,6 +325,10 @@ body {
     opacity: 0;
     transform: scale(0); } }
 
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
+
 .buttons, .buttons:link, .buttons:visited {
   text-decoration: none !important;
   padding: 0.5rem 2rem !important;
@@ -414,6 +413,14 @@ body {
     color: transparent; }
   .service-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
+
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
 
 .form__group:not(:last-child) {
   margin-bottom: 0rem !important; }
@@ -508,6 +515,10 @@ body {
 @media (min-width: 1160px) {
   .section-book-mob {
     display: none; } }
+
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
 
 .testim {
   width: 100%;
@@ -686,6 +697,10 @@ body {
   .testim .cont div p {
     line-height: 25px; } }
 
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
+
 .bg-green {
   background-image: linear-gradient(to bottom, rgba(85, 197, 122, 0.75), rgba(40, 180, 133, 0.75)), url("../../assets/Login.JPG") !important;
   background-position: center;
@@ -729,15 +744,20 @@ body {
 a {
   text-decoration: none !important; }
 
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
+
 .ben-num {
-  color: #fff !important;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
   font-size: 2.5rem !important; }
 
 .benefit-heading {
   color: #fff !important; }
 
 body {
-  font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
   line-height: 1.5; }
 
@@ -922,6 +942,28 @@ body {
   .com__nav-link {
     display: none !important; } }
 
+.new-heading {
+  font-size: 48px;
+  font-weight: 300;
+  color: #7ed56f; }
+
+.background-green {
+  background-color: #7ed56f !important; }
+
+.color-black {
+  color: #000 !important; }
+
+.color-white {
+  color: #fff !important; }
+
+.border {
+  background-color: #fff9f9 !important;
+  border-radius: 4px !important; }
+
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
+
 .card-blog {
   border: none !important;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
@@ -934,10 +976,6 @@ body {
 
 .intro {
   text-align: center; }
-
-@font-face {
-  font-family: "HelveticaNow";
-  src: url(https://assets.codepen.io/5286152/HelveticaNowText-Regular.ttf); }
 
 .introcontainer {
   width: 100%;
@@ -1186,6 +1224,10 @@ body {
 
 .modal-body {
   padding: 0px; }
+
+@font-face {
+  font-family: Segoe !important;
+  src: url("../../assets/font/Segoe UI.ttf"); }
 
 .popup {
   height: 100vh;
@@ -1859,6 +1901,9 @@ a {
 .f-w-700 {
   font-weight: 700 !important; }
 
+.f-w-500 {
+  font-weight: 400 !important; }
+
 ul {
   margin: 0px;
   padding: 0px; }
@@ -2166,3 +2211,6 @@ ul {
 @media (min-width: 900px) {
   .section-login-mb {
     display: none; } }
+
+.section-ex {
+  background-color: #efefef; }

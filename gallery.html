@@ -146,7 +146,7 @@
 
         <!-- SECTION - Gallery -->
         <section class="section-gallery-page">
-            <h1>Responsive Image Gallery</h1><hr>
+         
             <div id="gallery" class="container-fluid">  
               <img src="assets/gp-1.jpg" class="img-responsive">
               <img src="assets/gp-2.JPG" class="img-responsive">
@@ -177,6 +177,19 @@
             
               </div>
             </div>
+
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+              
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-body">
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
         </section>
 
     </main>
@@ -336,21 +349,7 @@ crossorigin="anonymous"></script>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script> -->
 <script>
-     //Get the button
-     var mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
+ 
 
 $(document).ready(function(){
   $("img").click(function(){
@@ -359,7 +358,13 @@ $(document).ready(function(){
   $("#myModal").modal();
 });
 
+$("video").click(function(){
+  var v = $("video > source");
+  var t = v.attr("src");
+  $(".modal-body").html("<video class='model-vid' controls><source src='"+t+"' type='video/mp4'></source></video>");
+  $("#myModal").modal();  
 });
+});//EOF Document.ready
 </script>
 </body>
 

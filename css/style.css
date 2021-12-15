@@ -1269,7 +1269,7 @@ body {
   width: 60px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
   right: 2% !important;
-  z-index: 1500;
+  z-index: 9999;
   position: fixed;
   top: 90%; }
 
@@ -1688,7 +1688,7 @@ a {
   background-image: linear-gradient(to bottom, #55c57a, #28b485); }
 
 .header-logo {
-  width: 70px !important; }
+  width: 100px !important; }
 
 .my-row {
   margin: 0px !important; }
@@ -1853,6 +1853,12 @@ a {
     opacity: 1;
     transform: translate(0); } }
 
+.logo-box {
+  background-color: rgba(14, 14, 14, 0.424); }
+
+.f-w-700 {
+  font-weight: 700 !important; }
+
 ul {
   margin: 0px;
   padding: 0px; }
@@ -1901,7 +1907,7 @@ ul {
   width: 30% !important; }
 
 .footer-logo img {
-  max-width: 70px; }
+  max-width: 150px; }
 
 .footer-text p {
   margin-bottom: 14px;
@@ -1969,6 +1975,7 @@ ul {
 
 .footer-widget ul li a {
   color: #878787 !important;
+  font-weight: 500;
   text-transform: capitalize; }
 
 .subscribe-form {

@@ -250,14 +250,9 @@ $(document).ready(function () {
 
   setTimeout(function () {
       $(".myModal").modal('show')
-  }, 10000);
+  }, 40000);
   $("#myModal").modal("show");
   $("#myModal").css("z-index", "1500");
 
 });
-
-// document.querySelector('.openWindow').addEventListener('click', function(){
-//   document.querySelector
-//     ('.popup2').classList.add('hidden');
-// })
 

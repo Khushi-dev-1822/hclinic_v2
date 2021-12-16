@@ -120,6 +120,19 @@ window.onload = function() {
 				}
 		})
 }
+
+document.ge
+
+
+var changeId = '1';
+
+setInterval(() => {
+  (changeId < '9') ? changeId++ : changeId = '1';
+  let clickable = document.getElementById(`click_${changeId}`);
+  clickable.click();
+}, 2000);
+
+
 // benefit section
 var link = $(".com__nav-link");
 var linkParent = link.parent("li");
@@ -144,10 +157,10 @@ var switchTab = function () {
   linkParent.removeClass("active");
   p.addClass("active");
 
-  
-
   return false;
 };
+
+
 
 // setTimeout(function(){
 //   document.querySelector(".one").click();

@@ -1865,10 +1865,6 @@ a {
   .u-margin-bottom-big {
     margin-bottom: 1rem !important; } }
 
-@media (max-width: 576px) {
-  .responsive-width {
-    display: none; } }
-
 .header-p {
   font-weight: 400 !important; }
 

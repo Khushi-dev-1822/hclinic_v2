@@ -102,21 +102,15 @@ window.onload = function() {
                 break;
         }
     })
-		
 		testim.addEventListener("touchstart", function(e) {
 				touchStartPos = e.changedTouches[0].clientX;
 		})
-	
 		testim.addEventListener("touchend", function(e) {
 				touchEndPos = e.changedTouches[0].clientX;
-			
 				touchPosDiff = touchStartPos - touchEndPos;
-			
 				console.log(touchPosDiff);
 				console.log(touchStartPos);	
 				console.log(touchEndPos);	
-
-			
 				if (touchPosDiff > 0 + ignoreTouch) {
 						testimLeftArrow.click();
 				} else if (touchPosDiff < 0 - ignoreTouch) {
@@ -124,7 +118,6 @@ window.onload = function() {
 				} else {
 					return;
 				}
-			
 		})
 }
 // benefit section
@@ -170,22 +163,8 @@ function activeFirst() {
   });
   linkParent.first().addClass("active");
 }
-
 activeFirst();
 
-
-
-// header URLS
-// FIXME - Bug found
-//  let imgArr = [
-//     "assets/slider_1.JPG",
-//     "assets/login.JPG",
-//   ]
-//   console.log(imgArr);
-//   let element = document.getElementById("changeBg");
-//   setInterval(() => {
-//       element.style.backgroundImage = `url(${imgArr[Math.floor(Math.random() * 3)]})`;
-//     }, 3000);
 
   // gallery
   const swiper = new Swiper('.swiper-container', {
@@ -228,20 +207,14 @@ dateControl.value = '2021-12-10';
 var dateControl = document.querySelector('input[type="time"]');
 dateControl.value = '00:00';
 
-
-
-
  // chatbot
-
  document.querySelector('.bot').addEventListener('click', function(){
    document.querySelector('.chatbot').classList.toggle('hidden');
    document.querySelector('.js-responseCard').style.opacity = '1';
    document.querySelector('.js-responseCard').classList.add('js-response');
-
  })
 
 // login/signup form
-
 const loginNow = document.getElementById('loginNow');
 const signupNow = document.getElementById('signupNow');
 const signup = document.querySelector('.signup');
@@ -260,14 +233,15 @@ loginNow.addEventListener('click', ()=>{
 
 // donate overlay
 
-//  setInterval(function(){
-//     document.querySelector
-//     ('.donate-popup').classList.remove('hidden')
-//     console.log('popup')
-//   },
-   
-//  3000);
+$(document).ready(function () {
 
+  setTimeout(function () {
+      $(".myModal").modal('show')
+  }, 10000);
+  $("#myModal").modal("show");
+  $("#myModal").css("z-index", "1500");
+
+});
 
 // document.querySelector('.openWindow').addEventListener('click', function(){
 //   document.querySelector

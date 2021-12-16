@@ -27,18 +27,18 @@
 
 .book {
   background-image: linear-gradient(
-      105deg,
-      rgba($color-white, 0.9) 0%,
-      rgba($color-white, 0.9) 50%,
-      transparent 50%
-    ),
-    url(../../assets/book.JPG);
-  background-size: 100%;
-  background-position: right 35% bottom 45%;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-  height: 48rem;
-  background-repeat: no-repeat;
+    105deg,
+    rgba($color-white, 0.9) 0%,
+    rgba($color-white, 0.9) 39%,
+    transparent 38%
+  ),
+  url(../../assets/book.JPG);
+background-size: 130%;
+background-position: right 88% bottom 44%;
+border-radius: 3px;
+box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+height: 43rem;
+background-repeat: no-repeat;
 
   &__form {
     width: 50%; 
@@ -121,3 +121,36 @@
   background-color: $color-odd-section;
 }
 
+.modal-content{
+  border-radius: 12px !important;
+  // height: 350px !important;
+ 
+}
+.modal-header{
+  border: none !important;
+  height: 150px !important;
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+.modal-footer{
+  border: none !important;
+}
+.donate-btn{
+  background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark) !important;
+  border-color: transparent !important;
+  padding: .5rem 2rem !important;
+
+ 
+}
+
+.donate-coin{
+  position: absolute !important;
+  top: -11% !important;
+  left: 4% !important;
+  width: 120px !important;
+  height: 120px ;
+}
+.show{
+  background-color: rgba($color-black, 0.8) !important;
+}

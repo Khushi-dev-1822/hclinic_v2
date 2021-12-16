@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@font-face {
+  font-family: Segoe !important;
+  src: url('../../assets/font/Segoe\ UI.ttf');
+}
 
 .card-blog {
   border: none !important;
@@ -17,10 +20,7 @@
 
 // main page gallery US
 
-@font-face {
-  font-family: "HelveticaNow"; 
-    src: url(https://assets.codepen.io/5286152/HelveticaNowText-Regular.ttf);
-  }
+
   
   .introcontainer {
     width: 100%;

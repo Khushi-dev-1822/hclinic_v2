@@ -524,6 +524,7 @@ l-spacing {
   src: url("../../assets/font/Segoe UI.ttf"); }
 
 .testim {
+  height: 40vh !important;
   width: 100%;
   -webkit-transform: translatey(-50%);
   -moz-transform: translatey(-50%);
@@ -1346,6 +1347,8 @@ body {
 
 .card-spe {
   width: 100%;
+  max-width: 300px;
+  min-width: 200px;
   height: 250px;
   background-color: #fff;
   margin: 10px;

@@ -469,7 +469,7 @@ l-spacing {
   display: none; }
 
 .form__radio-label {
-  font-size: inherit;
+  font-size: 1.2rem;
   cursor: pointer;
   position: relative;
   padding-left: 4.5rem; }
@@ -1017,14 +1017,8 @@ body {
   padding: 0;
   margin: 0; }
 
-.Card.two img {
-  filter: sepia(100%) hue-rotate(190deg) saturate(300%); }
-
 .Card.three img {
   height: 50vh; }
-
-.card.four img {
-  filter: invert(4%) sepia(75%) saturate(500%) hue-rotate(356deg) brightness(70%) contrast(103%); }
 
 .text {
   display: flex;
@@ -1039,11 +1033,7 @@ body {
   background: white; }
 
 .swiper-slide .card img {
-  transition: filter .7s ease;
-  filter: grayscale(100%); }
-
-.swiper-slide-active .card img {
-  filter: grayscale(0%) brightness(100%); }
+  transition: filter .7s ease; }
 
 .swiper-pagination-bullet-active {
   background: white !important;
@@ -2438,3 +2428,7 @@ ul {
 
 .show {
   background-color: rgba(0, 0, 0, 0.8) !important; }
+
+.excellence {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem !important; }

@@ -60,15 +60,11 @@
     margin: 0;
   }
   
-  .Card.two img {
-    filter: sepia(100%) hue-rotate(190deg) saturate(300%);
-  }
+ 
   .Card.three img {
     height: 50vh;
   }
-  .card.four img {
-    filter: invert(4%) sepia(75%) saturate(500%) hue-rotate(356deg) brightness(70%) contrast(103%);
-  }
+ 
   .text {
     display: flex;
     align-items: center;
@@ -138,11 +134,9 @@
   
   .swiper-slide .card img {
     transition: filter .7s ease;
-    filter: grayscale(100%);
+    // filter: grayscale(0%);
   }
-  .swiper-slide-active .card img {
-    filter: grayscale(0%) brightness(100%);
-  }
+ 
   
   .swiper-pagination-bullet-active {
     background: white !important;

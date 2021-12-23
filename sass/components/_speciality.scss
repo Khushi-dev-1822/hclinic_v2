@@ -47,7 +47,7 @@
        right: 0;
        bottom: 0;
  
-       .icon {
+       .icon-sp {
           width: 100%;
           height: 100%;
           background-size: 20px;
@@ -63,21 +63,21 @@
        &.portfolio {
           transition: all 0.8s ease;
  
-          .icon {
+          .icon-sp {
              background-image: url(https://rafaelalucas91.github.io/assets/codepen/link.svg);
           }
        }
  
        &.dribbble {
           transition: all 0.3s ease;
-          .icon {
+          .icon-sp {
              background-image: url(https://rafaelalucas91.github.io/assets/codepen/dribbble.svg);
           }
        }
  
        &.linkedin {
           transition: all 0.8s ease;
-          .icon {
+          .icon-sp {
              background-image: url(https://rafaelalucas91.github.io/assets/codepen/linkedin.svg);
           }
        }
@@ -96,13 +96,13 @@
        .social {
           opacity: 1;
  
-          .icon {
+          .icon-sp {
              opacity: 0.9;
           }
  
           &:hover {
              background-size: 28px;
-             .icon {
+             .icon-sp {
                 background-size: 65%;
                 opacity: 1;
              }
@@ -112,7 +112,7 @@
              right: 0;
              bottom: calc(100% - 40px);
              transition: all 0.3s 0s $cubic;
-             .icon {
+             .icon-sp {
                 &:hover {
                    background-color: #698fb7;
                 }
@@ -123,7 +123,7 @@
              bottom: 45%;
              right: 45%;
              transition: all 0.3s 0.15s $cubic;
-             .icon {
+             .icon-sp {
                 &:hover {
                    background-color: #ea4c89;
                 }
@@ -134,7 +134,7 @@
              bottom: 0;
              right: calc(100% - 40px);
              transition: all 0.3s 0.25s $cubic;
-             .icon {
+             .icon-sp {
                 &:hover {
                    background-color: #0077b5;
                 }
@@ -201,7 +201,7 @@
     transition: all 0.3s ease;
  }
  
- .icon {
+ .icon-sp {
     margin: 0 auto;
     width: 100%;
     height: 80px;
@@ -261,12 +261,12 @@
 //     max-height:40px;
 //  }
  
- .card-spe:hover .icon {
+ .card-spe:hover .icon-sp {
     background-position: -120px;
     transition: all 0.3s ease;
  }
  
- .card-spe:hover .icon i {
+ .card-spe:hover .icon-sp i {
     background: linear-gradient(90deg, $color-secondary-light, $color-secondary-dark);
     -webkit-background-clip: text;
     background-clip: text;

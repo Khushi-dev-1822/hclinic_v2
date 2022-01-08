@@ -246,15 +246,29 @@ loginNow.addEventListener('click', ()=>{
 
 // donate overlay
 
-// $(document).ready(function () {
+$(document).ready(function () {
 
-//   setTimeout(function () {
-//       $(".myModal").modal('show')
-//   }, 50000);
-//   $("#myModal").modal("show");
-//   $("#myModal").css("z-index", "1500");
+  setTimeout(function () {
+      $(".myModal").modal('show')
+  }, 50000);
+  $("#myModal").modal("show");
+  $("#myModal").css("z-index", "1500");
 
-// });
+});
 
 
 
+let navItem = document.querySelectorAll(".navbar-item");
+
+navItem.forEach(navItem =>{
+    navItem.addEventListener("click", ()=>{
+     resetItem();
+     navItem.classList.add('active_line');
+    })
+})
+
+function resetItem(){
+    navItem.forEach(navItem =>{
+        navItem.classList.remove('active_line');
+        })
+}

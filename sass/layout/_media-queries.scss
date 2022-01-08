@@ -1,0 +1,19 @@
+@media (max-width:1275px) {
+    .com__nav{
+        display: none !important;
+    }
+}
+
+@media (max-width:1159px) {
+    .book {
+       height: 48rem !important;
+    }
+}
+@media (max-width:600px) {
+    .com__section--text h1{
+        font-size: 30px !important;
+    }
+    .com__section--text img{
+        width: 168px;
+    }
+}

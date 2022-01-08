@@ -18,12 +18,14 @@ a {
     $color-primary-light,
     $color-primary-dark
   );
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-size: 2.5rem !important;
 }
 .benefit-heading{
   color: $color-white !important;
+  font-size: 3rem !important;
  
 }
 body {

@@ -246,15 +246,15 @@ loginNow.addEventListener('click', ()=>{
 
 // donate overlay
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-  setTimeout(function () {
-      $(".myModal").modal('show')
-  }, 50000);
-  $("#myModal").modal("show");
-  $("#myModal").css("z-index", "1500");
+//   setTimeout(function () {
+//       $(".myModal").modal('show')
+//   }, 50000);
+//   $("#myModal").modal("show");
+//   $("#myModal").css("z-index", "1500");
 
-});
+// });
 
 
 

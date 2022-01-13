@@ -32,9 +32,10 @@
       rgba($color-white, 0.9) 39%,
       transparent 38%
     ),
-    url("https://firebasestorage.googleapis.com/v0/b/saksham-clinic.appspot.com/o/book.jpg?alt=media&token=6dee2ffc-f866-49f4-b8d7-dc5f82582c76");
-  background-size: 130%;
-  background-position: right 88% bottom 44%;
+    url("/assets/slider_1.jpg");
+  background-size: 120%;
+  // background-position: right 88% bottom 44%;
+  background-position: right 89% bottom 31%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   height: 43rem;
@@ -128,7 +129,7 @@
 }
 .modal-header{
   border: none !important;
-  height: 150px !important;
+  height: 75px !important;
   display: flex !important;
   align-items: flex-end !important;
 }
@@ -141,7 +142,9 @@
   border-color: transparent !important;
   padding: .5rem 2rem !important;
 
- 
+}
+.form-text{
+  color: #ababab !important;
 }
 
 // .donate-coin{
@@ -154,8 +157,6 @@
 .show{
   background-color: rgba($color-black, 0.8) !important;
 }
-
-
 .excellence{
    font-family: 'Dancing Script', cursive;
    font-size: 3.5rem !important;

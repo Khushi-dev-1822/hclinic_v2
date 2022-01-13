@@ -50,8 +50,13 @@
 
 ///////new header
 
-
-
+@font-face{
+  font-family: myFirstFont;
+  src: url(/assets/font/mainHeading.ttf);
+}
+.large{
+  font-size: large !important;
+}
 .active_line {
   border-bottom: 3px solid #7ed56f;
 }
@@ -84,7 +89,7 @@ a {
   padding: 1rem 4rem;
 }
 .display-1 {
-  font-family: "Lato", sans-serif !important;
+  font-family: myFirstFont !important;
   font-weight: 900 !important;
   /* border-bottom: 5px solid #7ed56f; */
   width: 100%;
@@ -352,4 +357,8 @@ a {
  .f-w-500{
 
   font-weight: 400 !important;
+ }
+
+ .nav-item{
+   padding: 1rem 3rem !important;
  }

@@ -501,7 +501,7 @@ l-spacing {
   opacity: 1; }
 
 .book-mob {
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 50%), url(../assets/book.jpg) !important;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 50%), url(../assets/slider_1.jpg) !important;
   background-size: cover !important;
   background-position: bottom top;
   border-radius: 3px;
@@ -1903,6 +1903,13 @@ body {
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 1rem) / 4) + 2 * 1rem); }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(/assets/font/mainHeading.ttf); }
+
+.large {
+  font-size: large !important; }
+
 .active_line {
   border-bottom: 3px solid #7ed56f; }
 
@@ -1933,7 +1940,7 @@ a {
   padding: 1rem 4rem; }
 
 .display-1 {
-  font-family: "Lato", sans-serif !important;
+  font-family: myFirstFont !important;
   font-weight: 900 !important;
   /* border-bottom: 5px solid #7ed56f; */
   width: 100%; }
@@ -2120,6 +2127,9 @@ a {
 
 .f-w-500 {
   font-weight: 400 !important; }
+
+.nav-item {
+  padding: 1rem 3rem !important; }
 
 ul {
   margin: 0px;
@@ -2362,9 +2372,9 @@ ul {
   background-color: #fffafa !important; }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 39%, transparent 38%), url("https://firebasestorage.googleapis.com/v0/b/saksham-clinic.appspot.com/o/book.jpg?alt=media&token=6dee2ffc-f866-49f4-b8d7-dc5f82582c76");
-  background-size: 130%;
-  background-position: right 88% bottom 44%;
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 39%, transparent 38%), url("/assets/slider_1.jpg");
+  background-size: 120%;
+  background-position: right 89% bottom 31%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   height: 43rem;
@@ -2437,7 +2447,7 @@ ul {
 
 .modal-header {
   border: none !important;
-  height: 150px !important;
+  height: 75px !important;
   display: flex !important;
   align-items: flex-end !important; }
 
@@ -2448,6 +2458,9 @@ ul {
   background-image: linear-gradient(to right, #ffb900, #ff7730) !important;
   border-color: transparent !important;
   padding: .5rem 2rem !important; }
+
+.form-text {
+  color: #ababab !important; }
 
 .show {
   background-color: rgba(0, 0, 0, 0.8) !important; }

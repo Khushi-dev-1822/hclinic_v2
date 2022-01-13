@@ -250,7 +250,7 @@ $(document).ready(function () {
 
   setTimeout(function () {
       $(".myModal").modal('show')
-  }, 1000);
+  }, 50000);
   $("#myModal").modal("show");
   $("#myModal").css("z-index", "1500");
 

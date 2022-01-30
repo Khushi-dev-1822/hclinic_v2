@@ -214,18 +214,21 @@ activeFirst();
 //   document.documentElement.scrollTop = 0;
 // }
 
-//date/time
-var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2021-12-10';
-var dateControl = document.querySelector('input[type="time"]');
-dateControl.value = '00:00';
-
  // chatbot
  document.querySelector('.bot').addEventListener('click', function(){
    document.querySelector('.chatbot').classList.toggle('hidden');
    document.querySelector('.js-responseCard').style.opacity = '1';
    document.querySelector('.js-responseCard').classList.add('js-response');
  })
+
+ // Response 
+ document.querySelector('.ResponseCard-option').addEventListener('click', newResponse())
+
+ function newResponse(){
+ //  document.querySelector('.js-responseCard').classList.add('hidden');
+
+
+ }
 
 // login/signup form
 const loginNow = document.getElementById('loginNow');
@@ -242,12 +245,8 @@ loginNow.addEventListener('click', ()=>{
   signup.classList.add('hidden');
   login.classList.remove('hidden');
 })
-
-
 // donate overlay
-
 $(document).ready(function () {
-
   setTimeout(function () {
       $(".myModal").modal('show')
   }, 50000);
@@ -255,9 +254,6 @@ $(document).ready(function () {
   $("#myModal").css("z-index", "1500");
 
 });
-
-
-
 let navItem = document.querySelectorAll(".navbar-item");
 
 navItem.forEach(navItem =>{
@@ -266,9 +262,16 @@ navItem.forEach(navItem =>{
      navItem.classList.add('active_line');
     })
 })
-
 function resetItem(){
     navItem.forEach(navItem =>{
         navItem.classList.remove('active_line');
         })
 }
+
+
+function newPage(){
+  window.location.pathname = '/payment.html'
+}
+
+
+   

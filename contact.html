@@ -205,9 +205,7 @@
                                     <h6 class="heading"> Contact Information</h6>
                                 </div>
                                 <div class="col d-flex justify-content-end">
-                                    <p class="heading  pointer"> <a class="map"
-                                        onclick="getLocation()"   href="#">Map</a>
-                                       
+                                    <p class="heading  pointer"> <a class="map" id="setMapLink" href="">Map</a>
                                     </p>
                                 </div>
                             </div>
@@ -528,6 +526,9 @@ crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
 <script >
 
+// location onInit
+getLocation();
+    
 var lati ;
 var longi ;
 var x = document.querySelector("demo");
@@ -539,14 +540,14 @@ function getLocation() {
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
+  console.log(navigator.geolocation);
 }
 
 function showPosition(position) {
    lati =   position.coords.latitude;
    longi =  position.coords.longitude;
-   var mapLocation = "/maps/dir/"+lati+" "+longi+"/saksham+homeopathic+clinic/@28.5043971,77.0234675,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390d197a4408a385:0xe292b5b3ff07e6a9!2m2!1d77.0586062!2d28.5038191"
-   console.log(lati, longi);
-   console.log(mapLocation);
+   var mapLocation = "https://www.google.com/maps/dir/"+lati+","+longi+"/saksham+homeopathic+clinic/@28.5043971,77.0234675,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390d197a4408a385:0xe292b5b3ff07e6a9!2m2!1d77.0586062!2d28.5038191"
+   document.getElementById('setMapLink').href=mapLocation;
 }
 
 </script>

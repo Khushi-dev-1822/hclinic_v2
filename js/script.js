@@ -221,6 +221,8 @@ activeFirst();
    document.querySelector('.js-responseCard').classList.add('js-response');
  })
 
+
+ // TODO
  // Response 
  document.querySelector('.ResponseCard-option').addEventListener('click', newResponse())
 

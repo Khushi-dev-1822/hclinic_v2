@@ -1,26 +1,26 @@
 "use strict";
 // Counter To Count Number Visit
-var a = 0;
-$(window).scroll(function () {
-  const oTop = $("#counter").offset().top - window.innerHeight;
+// var a = 0;
+// $(window).scroll(function () {
+//   const oTop = $("#counter").offset().top - window.innerHeight;
 
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $(".counter").each(function () {
-     const $this = $(this);
-      jQuery({ Counter: 0 }).animate(
-        { Counter: $this.text() },
-        {
-          duration: 2000,
-          easing: "swing",
-          step: function () {
-            $this.text(Math.ceil(this.Counter));
-          },
-        }
-      );
-    });
-    a = 1;
-  }
-});
+//   if (a == 0 && $(window).scrollTop() > oTop) {
+//     $(".counter").each(function () {
+//      const $this = $(this);
+//       jQuery({ Counter: 0 }).animate(
+//         { Counter: $this.text() },
+//         {
+//           duration: 2000,
+//           easing: "swing",
+//           step: function () {
+//             $this.text(Math.ceil(this.Counter));
+//           },
+//         }
+//       );
+//     });
+//     a = 1;
+//   }
+// });
 
 // testimonial
 var	testim = document.getElementById("testim"),
@@ -198,39 +198,15 @@ activeFirst();
     },
   });
 
-  
-  // scrollup
-// var mybutton = document.getElementById("myBtn");
-// window.onscroll = function() {scrollFunction()};
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     mybutton.style.display = "block";
-//   } else {
-//     mybutton.style.display = "none";
-//   }
-// }
-// function topFunction() {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
-
- // chatbot
- document.querySelector('.bot').addEventListener('click', function(){
-   document.querySelector('.chatbot').classList.toggle('hidden');
-   document.querySelector('.js-responseCard').style.opacity = '1';
-   document.querySelector('.js-responseCard').classList.add('js-response');
- })
 
 
- // TODO
- // Response 
- document.querySelector('.ResponseCard-option').addEventListener('click', newResponse())
+  // chatbot
+  document.querySelector('.bot').addEventListener('click', function(){
+    document.querySelector('.chatbot').classList.toggle('hidden');
+    document.querySelector('.js-responseCard').style.opacity = '1';
+   
+  })
 
- function newResponse(){
- //  document.querySelector('.js-responseCard').classList.add('hidden');
-
-
- }
 
 // login/signup form
 const loginNow = document.getElementById('loginNow');
@@ -271,9 +247,9 @@ function resetItem(){
 }
 
 
-function newPage(){
-  window.location.pathname = '/payment.html'
-}
+// function newPage(){
+//   window.location.pathname = '/payment.html'
+// }
 
 
    

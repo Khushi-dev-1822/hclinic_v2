@@ -285,3 +285,10 @@
                         </li>
                     </ul>
                 </nav>
+
+
+
+
+                 userQuestions = new Array( "Hi there! What time slots are available?", "Can I get the Working Hours?", "Hey, Want to know the fee structure here")
+  botResponse = new Array( "2:30", "6 hours", "Here is the link")
+  

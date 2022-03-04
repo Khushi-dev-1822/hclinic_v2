@@ -76,7 +76,7 @@
 }
  
 .denomination-other input:hover{
-    background-color: red;
+  background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
 }
  
 .denomination-other input:before {
@@ -87,7 +87,7 @@
 }
   
 .donate-amount .selected, .denomination-other input.selected, .donate-amount .denomination:hover{
-    background-color: #EC3029;
+  background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
     border: 0;
 }
 
@@ -107,7 +107,7 @@
     text-align: center;
     width: 30px;
     height: 25px;
-    background-color: red;
+    background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
     border-radius: 50%;
 }
  
@@ -130,7 +130,7 @@
 .donate-submit button{
     font-family: 'Oswald', sans-serif;
     width: 100%;
-    background-color: red;
+    background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
     border: none;
     color: #FFF;
     font-size: 20px;
@@ -214,7 +214,7 @@
               </div>
           </div>
         </div>
-        <div class="donate-black donate-type">
+        <!-- <div class="donate-black donate-type">
           <h3>Donation type*</h3>
           <label>
                       <input type="radio" name="donation_type" value="single" checked="checked" autocomplete="off" class="required">
@@ -224,7 +224,7 @@
                       <input type="radio" name="donation_type" value="recurring" autocomplete="off" class="required">
                       Monthly
           </label>
-        </div>
+        </div> -->
         <div class="donate-blue donate-payment">
           <h3>Payment Method</h3>
           <div>
@@ -242,11 +242,18 @@
             </label>
           </div>
           <div class="donate-submit">
-            <button type="submit" autocomplete="off">Donate $5</button>
+            <button type="submit" autocomplete="off" class="donate-now">Donate $5</button>
             <p><small>Please note that contributions are not tax-deductible.</small></p>
           </div>
         </div>
       </div>
+
+<!-- Vertically centered modal -->
+<div class="modal-dialog modal-dialog-centered donate-modal">
+  ...
+</div>
+
+
 
       <script >
           
@@ -272,6 +279,11 @@ $(".denomination-other input").on('keypress', function (event) {
   $(this).addClass("selected");
   $("button").text('Donate $' + $(this).val() + key );
 });
+
+// Donate now function
+
+
+
       </script>
 </body>
 </html>

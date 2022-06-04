@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <style>
 
         body{
             padding: 0;
             margin: 0;
+        }
+
+        .hidden{
+          display: none !important;
         }
   
 .donate{
@@ -76,7 +81,7 @@
 }
  
 .denomination-other input:hover{
-  background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
+  background-color:#5463FF;
 }
  
 .denomination-other input:before {
@@ -87,7 +92,7 @@
 }
   
 .donate-amount .selected, .denomination-other input.selected, .donate-amount .denomination:hover{
-  background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
+  background-color:#5463FF;
     border: 0;
 }
 
@@ -107,7 +112,8 @@
     text-align: center;
     width: 30px;
     height: 25px;
-    background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
+    background-color:#5463FF;
+
     border-radius: 50%;
 }
  
@@ -130,7 +136,8 @@
 .donate-submit button{
     font-family: 'Oswald', sans-serif;
     width: 100%;
-    background: linear-gradient(rgba(5, 184, 35), rgba(8, 161, 221, 0.349));
+    background-color:#5463FF;
+
     border: none;
     color: #FFF;
     font-size: 20px;
@@ -180,40 +187,7 @@
           <h2><span>$</span> Donate</h3>
           <p>Your contribution is vital to the success of our initiative.<br>Choose the amount you wish to donate. </p>
         </div>
-        <div class="donate-blue">
-          <h3>Donation amount*</h3>
-          <div class="donate-amount-box">
-            <div class="donate-amount">
-              <div class="denomination selected">
-                <input autocomplete="off" type="radio" name="amount" id="amount5" value="5" checked="">
-                <label for="amount5">$5</label>
-              </div>
-              <div class="denomination">
-                <input autocomplete="off" type="radio" name="amount" id="amount10" value="10">
-                <label for="amount10">$10</label>
-              </div>
-              <div class="denomination">
-                <input autocomplete="off" type="radio" name="amount" id="amount15" value="15">
-                <label for="amount15">$15</label>
-              </div>
-              <div class="denomination">
-                <input autocomplete="off" type="radio" name="amount" id="amount25" value="25">
-                <label for="amount25">$25</label>
-              </div>
-              <div class="denomination">
-                <input autocomplete="off" type="radio" name="amount" id="amount50" value="50">
-                <label for="amount50">$50</label>
-              </div>
-              <div class="denomination">
-                <input autocomplete="off" type="radio" name="amount" id="amount100" value="100">
-                <label for="amount100">$100</label>
-              </div>
-            </div>
-            <div class="denomination-other">
-                <input autocomplete="off" type="text" name="amount" value="" placeholder="Enter Other Amount">
-              </div>
-          </div>
-        </div>
+     
         <!-- <div class="donate-black donate-type">
           <h3>Donation type*</h3>
           <label>
@@ -228,7 +202,7 @@
         <div class="donate-blue donate-payment">
           <h3>Payment Method</h3>
           <div>
-            <label>
+            <!-- <label>
               <input type="radio" name="payment" value="paypal" checked="checked" autocomplete="off">PayPal
             </label>
             <label>
@@ -236,54 +210,66 @@
             </label>
             <label>
               <input type="radio" name="payment" value="crypto" autocomplete="off">Debit/Credit/ATM 
-            </label>
+            </label> -->
             <label>
               <input type="radio" name="payment" value="crypto" autocomplete="off">UPI
             </label>
           </div>
           <div class="donate-submit">
-            <button type="submit" autocomplete="off" class="donate-now">Donate $5</button>
-            <p><small>Please note that contributions are not tax-deductible.</small></p>
+            <button type="submit" autocomplete="off" class="donate-now" onclick="openScanner()">Donate </button>
+            <!-- <p><small>Please note that contributions are not tax-deductible.</small></p> -->
           </div>
         </div>
       </div>
 
-<!-- Vertically centered modal -->
-<div class="modal-dialog modal-dialog-centered donate-modal">
-  ...
+
+
+<!-- Vertically centered scrollable modal -->
+<div class="modal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable hidden openCode" >
+  <div class="modal-body">
+    <div class="card" style="width: 18rem;" height="300px" width="300px">
+      <img src="./assets/random-code.png" class="card-img-top" alt="..." height="200px" width="200" >
+    </div>
+  </div>
+</div>
 </div>
 
 
 
-      <script >
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+  <script>
           
-          $(".denomination").click(function(event) {
-  $(".denomination").removeClass("selected").prop('checked', false);
-  $(".denomination-other input").removeClass("selected").val('');
-  $(this).addClass("selected");
-  $(this).children(":first").prop('checked', true);
-  $("button").text('Donate $' + $(this).children(":first").val())
-});
+//           $(".denomination").click(function(event) {
+//   $(".denomination").removeClass("selected").prop('checked', false);
+//   $(".denomination-other input").removeClass("selected").val('');
+//   $(this).addClass("selected");
+//   $(this).children(":first").prop('checked', true);
+//   $("button").text('Donate $' + $(this).children(":first").val())
+// });
 
-$(".denomination-other input").on('keypress', function (event) {
-  // allow only int values
-  // TODO: remove leading 0
-  var regex = new RegExp("^[0-9]+$");
-  var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-  if (!regex.test(key)) {
-    event.preventDefault();
-    return false;
-  }
+// $(".denomination-other input").on('keypress', function (event) {
+//   // allow only int values
+//   // TODO: remove leading 0
+//   var regex = new RegExp("^[0-9]+$");
+//   var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+//   if (!regex.test(key)) {
+//     event.preventDefault();
+//     return false;
+//   }
   
-  $(".denomination").removeClass("selected").prop('checked', false);
-  $(this).addClass("selected");
-  $("button").text('Donate $' + $(this).val() + key );
-});
+//   $(".denomination").removeClass("selected").prop('checked', false);
+//   $(this).addClass("selected");
+//   $("button").text('Donate $' + $(this).val() + key );
+// });
 
 // Donate now function
-
-
-
+ function openScanner(){
+document.querySelector('.openCode').classList.remove('hidden');
+console.log('Btn is clicked')
+}
       </script>
+     
 </body>
 </html>

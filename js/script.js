@@ -247,9 +247,9 @@ function resetItem(){
 }
 
 
-// function newPage(){
-//   window.location.pathname = '/payment.html'
-// }
+function newPage(){
+  window.location.pathname = '/payment.html'
+}
 
 
    
